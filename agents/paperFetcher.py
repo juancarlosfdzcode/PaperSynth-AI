@@ -48,6 +48,15 @@ def arxiv_search(client, max_results, query):
 
     return results
 
+def get_html_urls(paper_id):
+    """
+    Genera URLs HTML para un paper dado su ID de arXiv.
+    """
+
+    arxiv_html = f"https://arxiv.org/html/{paper_id}"
+
+    return arxiv_html
+
 ## Conocer los campos que devuelve la llamada ##
 
 def result_fields(results):
@@ -73,11 +82,14 @@ def papers_processor(results, fields=elements):
     papers = []
 
     for i, result in enumerate(results, 1):
+
+        arxiv_id = result.entry_id.split('/')[-1]
         
         paper = {
             'id': i,
-            'arxiv_id': result.entry_id.split('/')[-1],
-            'processed_date': datetime.now().isoformat()
+            'arxiv_id': arxiv_id,
+            'processed_date': datetime.now().isoformat(),
+            'html_url': get_html_urls(arxiv_id)
             }
 
         for field in fields:

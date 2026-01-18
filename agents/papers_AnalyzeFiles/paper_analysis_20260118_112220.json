@@ -1,0 +1,35 @@
+{
+  "main_techniques": [
+    "Self-Attention",
+    "Multi-Head Attention",
+    "Positional Encoding",
+    "Scaled Dot-Product Attention",
+    "Encoder-Decoder Architecture"
+  ],
+  "key_contributions": [
+    "Eliminación completa de la dependencia en redes recurrentes (RNN) y convolucionales (CNN)",
+    "Introducción de la arquitectura Transformer",
+    "Reducción significativa en los tiempos de entrenamiento mediante paralelización",
+    "Establecimiento de nuevos estados del arte en tareas de traducción"
+  ],
+  "relevance_score": 10,
+  "theme_category": "Procesamiento de Lenguaje Natural / Aprendizaje Profundo",
+  "innovation_level": "alto",
+  "practical_applications": [
+    "Traducción automática",
+    "Modelos de lenguaje de gran tamaño (LLMs)",
+    "Resumen de textos",
+    "Generación de lenguaje natural",
+    "Análisis de sentimientos"
+  ],
+  "research_area": "Artificial Intelligence / Deep Learning",
+  "keywords": [
+    "Transformer",
+    "Attention mechanism",
+    "Self-attention",
+    "Sequence-to-sequence",
+    "Parallelization"
+  ],
+  "paper_url": "https://arxiv.org/abs/1706.03762",
+  "analyzed_at": "2026-01-18T11:22:20.966773"
+}
