@@ -1,0 +1,101 @@
+[
+  {
+    "main_techniques": [
+      "Self-Attention",
+      "Multi-Head Attention",
+      "Positional Encoding",
+      "Encoder-Decoder Architecture"
+    ],
+    "key_contributions": [
+      "Eliminación total de la dependencia de redes recurrentes y convolucionales",
+      "Introducción de la arquitectura Transformer",
+      "Reducción significativa en los tiempos de entrenamiento mediante paralelización",
+      "Establecimiento de un nuevo estado del arte en tareas de traducción automática"
+    ],
+    "relevance_score": 10,
+    "theme_category": "Deep Learning / NLP",
+    "innovation_level": "alto",
+    "practical_applications": [
+      "Traducción automática",
+      "Modelos de lenguaje a gran escala (GPT, BERT)",
+      "Resumen de texto",
+      "Análisis de sentimiento"
+    ],
+    "research_area": "Procesamiento de Lenguaje Natural",
+    "keywords": [
+      "Transformer",
+      "Self-Attention",
+      "Neural Machine Translation",
+      "Deep Learning",
+      "Parallelization"
+    ],
+    "paper_url": "https://arxiv.org/abs/1706.03762",
+    "analyzed_at": "2026-01-18T11:56:06.542574"
+  },
+  {
+    "main_techniques": [
+      "Masked Language Modeling (MLM)",
+      "Next Sentence Prediction (NSP)",
+      "Transformer Encoder Architecture",
+      "Deep Bidirectional Pre-training"
+    ],
+    "key_contributions": [
+      "Introducción de representaciones bidireccionales profundas en todas las capas",
+      "Paradigma de pre-entrenamiento y ajuste fino (fine-tuning) para múltiples tareas de NLP",
+      "Logro de resultados de vanguardia (SOTA) en 11 tareas de procesamiento de lenguaje natural incluyendo GLUE y SQuAD"
+    ],
+    "relevance_score": 10,
+    "theme_category": "Natural Language Processing",
+    "innovation_level": "alto",
+    "practical_applications": [
+      "Motores de búsqueda",
+      "Sistemas de respuesta a preguntas",
+      "Análisis de sentimiento",
+      "Extracción de entidades",
+      "Clasificación de texto"
+    ],
+    "research_area": "Computation and Language",
+    "keywords": [
+      "BERT",
+      "Transformers",
+      "Bidirectional",
+      "Language Model",
+      "Transfer Learning"
+    ],
+    "paper_url": "https://arxiv.org/abs/1810.04805",
+    "analyzed_at": "2026-01-18T11:56:16.068209"
+  },
+  {
+    "main_techniques": [
+      "Transformadores autorregresivos",
+      "Escalado masivo de parámetros (175 mil millones)",
+      "Aprendizaje en contexto (In-context learning)",
+      "Pre-entrenamiento generativo a gran escala"
+    ],
+    "key_contributions": [
+      "Demostración de que el escalado de modelos de lenguaje mejora drásticamente la capacidad de aprendizaje few-shot",
+      "Eliminación de la necesidad de ajuste fino (fine-tuning) para diversas tareas de NLP",
+      "Evaluación exhaustiva en más de 50 benchmarks demostrando rendimiento competitivo contra modelos especializados"
+    ],
+    "relevance_score": 10,
+    "theme_category": "Modelos de Lenguaje de Gran Escala (LLMs)",
+    "innovation_level": "alto",
+    "practical_applications": [
+      "Generación de texto fluido y creativo",
+      "Traducción automática sin entrenamiento específico",
+      "Resolución de tareas de razonamiento lógico y aritmético",
+      "Generación de código fuente",
+      "Sistemas de respuesta a preguntas"
+    ],
+    "research_area": "Procesamiento de Lenguaje Natural / Inteligencia Artificial",
+    "keywords": [
+      "GPT-3",
+      "Few-shot learning",
+      "Transformers",
+      "Scale",
+      "Zero-shot"
+    ],
+    "paper_url": "https://arxiv.org/abs/2005.14165",
+    "analyzed_at": "2026-01-18T11:56:26.405103"
+  }
+]

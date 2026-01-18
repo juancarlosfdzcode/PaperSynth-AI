@@ -181,5 +181,55 @@ def test_analyzer():
         output_file = analyzer.save_analysis(result)
         logger.info(f"\nResultados almacenados en: {output_file}")
 
+def test_multiple_papers():
+    """
+    Función para testear con múltiples papers.
+    """
+    
+    test_papers = [
+        PaperData(
+            title="Attention Is All You Need",
+            authors=["Ashish Vaswani", "Noam Shazeer", "Niki Parmar"],
+            published="2017-06-12",
+            summary="The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+            categories=["cs.CL", "cs.AI"],
+            primary_category="Computation and Language",
+            html_url="https://arxiv.org/abs/1706.03762"
+        ),
+        PaperData(
+            title="BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            authors=["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
+            published="2018-10-11",
+            summary="We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers.",
+            categories=["cs.CL"],
+            primary_category="Computation and Language",
+            html_url="https://arxiv.org/abs/1810.04805"
+        ),
+        PaperData(
+            title="GPT-3: Language Models are Few-Shot Learners",
+            authors=["Tom B. Brown", "Benjamin Mann", "Nick Ryder"],
+            published="2020-05-28",
+            summary="Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples.",
+            categories=["cs.CL"],
+            primary_category="Computation and Language",
+            html_url="https://arxiv.org/abs/2005.14165"
+        )
+    ]
+    
+    logger.info("Testing Multiple Papers Analysis")
+    logger.info("=" * 50)
+    logger.info(f"Analizando {len(test_papers)} papers de prueba...")
+    
+    analyzer = ContentAnalyzerAgent()
+    results = analyzer.analyze_batch(test_papers)
+    
+    output_file = analyzer.save_analysis(results, "test_multiple_papers.json")
+    
+    successful = len([r for r in results if 'error' not in r])
+    logger.info(f"\nTest completado: {successful}/{len(test_papers)} papers analizados correctamente")
+    logger.info(f"Resultados guardados en: {output_file}")
+
 if __name__ == "__main__":
-    test_analyzer()
+    ## test_analyzer()
+
+    test_multiple_papers()
