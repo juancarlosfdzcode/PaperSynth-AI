@@ -168,7 +168,6 @@ def test_analyzer():
     
     result = analyzer.analyze_paper(sample_paper)
     
-    # Display results
     if 'error' in result:
         logger.error(f"❌ Fallo en el análisis: {result['error']}")
     else:
@@ -179,7 +178,6 @@ def test_analyzer():
             if key not in ['paper_url', 'analyzed_at']:
                 logger.info(f"{key}: {value}")
         
-        # Save results
         output_file = analyzer.save_analysis(result)
         logger.info(f"\nResultados almacenados en: {output_file}")
 
