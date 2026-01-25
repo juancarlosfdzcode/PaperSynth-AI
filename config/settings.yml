@@ -1,0 +1,49 @@
+# Project Configuration
+
+project:
+  name: "PaperSynth Research Agent"
+  version: "1.0.0"
+  description: "Multi-agent system for AI research paper synthesis"
+
+environment:
+  log_level: "INFO"
+  data_dir: "data"
+  output_dir: "outputs"
+  max_concurrent_tasks: 3
+
+apis:
+  gemini:
+    model: "gemini-1.5-flash"
+    max_tokens: 1000
+    temperature: 0.1
+    rate_limit: 15
+    safety_settings:
+      harassment: "block_none"
+      hate_speech: "block_none"
+      sexually_explicit: "block_none"
+      dangerous_content: "block_none"    
+  
+  arxiv:
+    rate_limit: 1.0
+    max_retries: 3
+    timeout: 30
+    prefer_html_version: true
+    ar5iv_base_url: https://ar5iv.labs.arxiv.org/html/
+
+research:
+  default_categories:
+    - "cs.AI"
+    - "cs.LG" 
+    - "cs.CL"
+    - "cs.CV"
+  
+  default_query_terms:
+    - "artificial intelligence"
+    - "machine learning"
+    - "deep learning"
+    - "neural networks"
+  
+  max_papers_per_run: 100
+  batch_size: 10
+  date_range_days: 60
+  processing_mode: "abstract_plus_url"

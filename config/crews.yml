@@ -1,0 +1,53 @@
+# Crews Configuration.
+
+crews:
+  research_synthesis_crew:
+    name: "AI Research Synthesis Crew"
+    description: "Complete pipeline for AI research paper analysis and synthesis"
+    
+    agents:
+      - "paper_fetcher"
+      - "content_analyzer" 
+      - "trend_detector"
+      - "synthesis_writer"
+    
+    tasks:
+      - "fetch_papers"
+      - "analyze_content"
+      - "detect_trends"
+      - "synthesize_report"
+    
+    config:
+      process: "sequential"
+      verbose: true
+      memory: true
+      embedder:
+        provider: "openai"
+        config:
+          model: "text-embedding-3-small"
+      
+    output:
+      format: "json"
+      save_to: "outputs/crew_results.json"
+      include_intermediate: true
+
+  quick_analysis_crew:
+    name: "Quick Paper Analysis Crew" 
+    description: "Fast analysis for smaller paper sets"
+    
+    agents:
+      - "paper_fetcher"
+      - "content_analyzer"
+    
+    tasks:
+      - "fetch_papers"
+      - "analyze_content"
+    
+    config:
+      process: "sequential"
+      verbose: false
+      memory: false
+      
+    output:
+      format: "json"
+      save_to: "outputs/quick_analysis.json"

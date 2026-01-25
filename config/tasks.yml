@@ -1,0 +1,114 @@
+# Tasks Configuration
+
+tasks:
+  fetch_papers:
+    description: |
+      Search and collect recent research papers on {research_topic} from arXiv.
+      
+      Focus on:
+      1. Papers from the last {date_range_days} days
+      2. High-quality research with clear abstracts and methodology
+      3. Papers from reputable authors/institutions when possible
+      4. Diverse subtopics within the research area
+      
+      Search parameters:
+      - Query: {research_topic}
+      - Max results: {max_papers}
+      - Categories: {categories}
+    
+    expected_output: |
+      A JSON object containing:
+      - Total number of papers found
+      - List of papers with complete metadata (title, authors, abstract, categories, dates)
+      - Summary of topics covered  
+      - Quality assessment of the paper collection
+      - Any issues encountered during fetching
+    
+    config:
+      output_file: "data/fetched_papers.json"
+      agent: "paper_fetcher"
+      context_variables:
+        - "research_topic"
+        - "max_papers"
+        - "date_range_days"
+        - "categories"
+
+  analyze_content:
+    description: |
+      Analyze the collected research papers to extract:
+      
+      For each paper:
+      1. Main methodology and approach
+      2. Key contributions and novelty
+      3. Technical keywords and concepts
+      4. Practical applications and implications
+      5. Limitations and future work suggestions
+      
+      Provide structured analysis that can be used for trend detection and synthesis.
+    
+    expected_output: |
+      A structured JSON containing:
+      - Per-paper analysis with standardized schema
+      - Aggregated insights across all papers
+      - Technical keyword frequency analysis
+      - Methodology distribution summary
+      - Innovation and impact scoring
+    
+    config:
+      output_file: "data/analyzed_papers.json"
+      agent: "content_analyzer"
+      depends_on: ["fetch_papers"]
+      context_from: "fetch_papers"
+
+  detect_trends:
+    description: |
+      Analyze the processed papers to identify:
+      
+      1. Emerging research trends and hot topics
+      2. Evolving methodologies and approaches
+      3. Research gap identification
+      4. Author collaboration networks
+      5. Cross-domain connections and influences
+      
+      Focus on actionable insights for researchers and strategists.
+    
+    expected_output: |
+      A comprehensive trend analysis including:
+      - Top 10 emerging trends with evidence
+      - Methodology evolution patterns
+      - Research gap opportunities
+      - Prediction of future research directions
+      - Network analysis of key researchers and institutions
+    
+    config:
+      output_file: "data/trend_analysis.json"
+      agent: "trend_detector"
+      depends_on: ["analyze_content"]
+      context_from: "analyze_content"
+
+  synthesize_report:
+    description: |
+      Create a comprehensive research synthesis report that combines all previous analyses into:
+      
+      1. Executive Summary (business-friendly)
+      2. Technical Deep Dive (researcher-focused)
+      3. Trend Analysis and Predictions
+      4. Strategic Recommendations
+      5. Key Papers and Must-Read List
+      
+      Tailor the report for both technical and business audiences.
+    
+    expected_output: |
+      A professional research report in markdown format containing:
+      - Executive summary (2-3 pages)
+      - Detailed technical analysis (5-8 pages)
+      - Trend predictions with confidence levels
+      - Actionable recommendations
+      - Appendix with key papers and references
+      - Visualizations and charts where appropriate
+    
+    config:
+      output_file: "outputs/research_synthesis_report.md"
+      agent: "synthesis_writer"
+      depends_on: ["fetch_papers", "analyze_content", "detect_trends"]
+      context_from: "all"

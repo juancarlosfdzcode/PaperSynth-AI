@@ -1,0 +1,393 @@
+{
+  "status": "success",
+  "total_papers": 15,
+  "analyzed_count": 14,
+  "timestamp": "20260125_105122",
+  "analyses": [
+    {
+      "arxiv_id": "2601.16211v1",
+      "title": "Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "The RCORE framework, utilizing composition-aware data augmentation and temporal order regularization loss to enforce temporally grounded verb learning.",
+        "key_contribution": "Identifies and mitigates object-driven verb shortcuts in zero-shot compositional action recognition by diversifying verb-object combinations and penalizing shortcut behaviors through temporal modeling.",
+        "technical_keywords": [
+          "Zero-Shot Compositional Action Recognition",
+          "Object-driven shortcuts",
+          "Temporal order regularization",
+          "Composition-aware augmentation",
+          "Video Understanding"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Video search and retrieval",
+          "Instruction-based robotic manipulation",
+          "Automated video activity analysis"
+        ],
+        "limitations": [
+          "Effectiveness may depend on the quality of temporal cues in the video",
+          "Potential computational overhead from composition-aware augmentation"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16210v1",
+      "title": "PyraTok: Language-Aligned Pyramidal Tokenizer for Video Understanding and Generation",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Language-aligned Pyramidal Quantization (LaPQ) with multi-scale discretization and a shared large binary codebook.",
+        "key_contribution": "Introduces a pyramidal video tokenizer that produces semantically structured discrete latents across multiple spatiotemporal resolutions to improve cross-modal alignment and zero-shot transfer.",
+        "technical_keywords": [
+          "Discrete Video VAE",
+          "Pyramidal Quantization",
+          "Cross-modal Alignment",
+          "Video Tokenization",
+          "Spatiotemporal Resolutions"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Text-to-video generation",
+          "Zero-shot video segmentation",
+          "Temporal action localization",
+          "High-resolution video understanding"
+        ],
+        "limitations": [
+          "Increased computational overhead for multi-scale feature processing",
+          "Potential reliance on high-quality text-video paired data for the LaPQ module"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16206v1",
+      "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+      "analysis": {
+        "ai_subcategory": "NLP, Reinforcement Learning, Agentic AI",
+        "methodology": "Integrating LLMs into a virtual computer sandbox environment combined with Reinforcement Learning (LLM-in-Sandbox-RL) using non-agentic data.",
+        "key_contribution": "Introduces a framework that enables LLMs to leverage code sandbox exploration to solve complex tasks in non-code domains such as science, long-context processing, and instruction following.",
+        "technical_keywords": [
+          "LLM Agent",
+          "Code Sandbox",
+          "Reinforcement Learning",
+          "Agentic Intelligence",
+          "Tool-use"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Automated scientific reasoning in physics, chemistry, and biomedicine",
+          "Management of long-context data through file system interactions",
+          "Complex task automation through script execution and knowledge retrieval"
+        ],
+        "limitations": [
+          "Computational and system overhead of running virtual environments",
+          "Dependence on the base model's inherent ability to generate and execute code",
+          "Potential safety and security risks inherent in autonomous code execution"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16205v1",
+      "title": "Counterfactual Training: Teaching Models Plausible and Actionable Explanations",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Counterfactual training regime that integrates counterfactual generation into the optimization process to minimize divergence between learned representations and plausible/actionable explanations.",
+        "key_contribution": "A novel training framework that ensures machine learning models provide inherently plausible and actionable counterfactual explanations while simultaneously enhancing adversarial robustness.",
+        "technical_keywords": [
+          "Counterfactual Explanations",
+          "Explainable AI (XAI)",
+          "Counterfactual Training",
+          "Adversarial Robustness",
+          "Feature Mutability"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Automated credit scoring providing actionable recourse",
+          "Medical decision support systems for treatment planning",
+          "Algorithmic auditing for regulatory compliance"
+        ],
+        "limitations": [
+          "Increased computational complexity during the training phase",
+          "Dependence on the accuracy of predefined feature mutability and plausibility constraints"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16200v1",
+      "title": "Provable Robustness in Multimodal Large Language Models via Feature Space Smoothing",
+      "analysis": {
+        "ai_subcategory": "Multimodal Learning (CV/NLP)",
+        "methodology": "Feature-space Smoothing (FS) and Purifier and Smoothness Mapper (PSM)",
+        "key_contribution": "Provides a theoretically proven robustness framework for MLLMs that guarantees a certified lower bound on feature cosine similarity under adversarial attacks without requiring model retraining.",
+        "technical_keywords": [
+          "Multimodal Large Language Models",
+          "Certified Robustness",
+          "Feature-space Smoothing",
+          "Feature Cosine Similarity Bound",
+          "Adversarial Defense"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Securing vision-language models against adversarial noise",
+          "Robust multimodal content moderation",
+          "Safe deployment of MLLMs in security-critical environments"
+        ],
+        "limitations": [
+          "Focuses specifically on l2-bounded perturbations",
+          "Computational overhead associated with smoothing-based inference",
+          "Theoretical bounds may be conservative compared to empirical performance"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16194v1",
+      "title": "A Rolling-Space Branch-and-Price Algorithm for the Multi-Compartment Vehicle Routing Problem with Multiple Time Windows",
+      "analysis": {
+        "ai_subcategory": "Optimization/Operations Research",
+        "methodology": "Branch-and-Price (BP) algorithm with a rolling-space strategy, labeling-based pricing, and clustering techniques.",
+        "key_contribution": "Introduces a rolling-space branch-and-price framework to solve a complex multi-compartment vehicle routing problem featuring multiple time windows and item compatibility constraints.",
+        "technical_keywords": [
+          "Branch-and-Price",
+          "Multi-Compartment Vehicle Routing",
+          "Multiple Time Windows",
+          "Column Generation",
+          "Labeling Algorithm"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Industrial logistics and distribution",
+          "Fuel and chemical transport",
+          "Grocery supply chain management",
+          "Waste collection with segregation"
+        ],
+        "limitations": [
+          "Computational overhead for reaching global optimality in extremely large-scale instances",
+          "Heuristic nature of the rolling-space clustering component may sacrifice exactness for scalability"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16175v1",
+      "title": "Learning to Discover at Test Time",
+      "analysis": {
+        "ai_subcategory": "RL/ML",
+        "methodology": "Reinforcement learning at test time (TTT) to specialize a Large Language Model on a single problem instance using continuous rewards.",
+        "key_contribution": "Introduces TTT-Discover, a framework that shifts from simple test-time search to test-time training, enabling LLMs to achieve new state-of-the-art results in scientific discovery.",
+        "technical_keywords": [
+          "Test-Time Training",
+          "Reinforcement Learning",
+          "Scientific Discovery",
+          "Large Language Models",
+          "Continuous Rewards"
+        ],
+        "novelty_score": 9,
+        "practical_applications": [
+          "GPU kernel optimization",
+          "Mathematical conjecture solving",
+          "Competitive algorithm design",
+          "Single-cell analysis in biology"
+        ],
+        "limitations": [
+          "Dependency on continuous reward signals",
+          "Computational cost per problem instance",
+          "Focus on single-problem optimization over generalization"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16174v1",
+      "title": "Beyond Predictive Uncertainty: Reliable Representation Learning with Structural Constraints",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Uncertainty-aware regularization and structural inductive biases applied to representation spaces",
+        "key_contribution": "Introduces a framework that treats representation reliability as a first-class property by modeling representation-level uncertainty and using structural constraints to improve stability and calibration.",
+        "technical_keywords": [
+          "uncertainty estimation",
+          "representation learning",
+          "structural constraints",
+          "inductive bias",
+          "regularization"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Out-of-distribution detection in safety-critical systems",
+          "Robust feature extraction for noisy medical or financial datasets",
+          "Reliable representation learning for low-resource domains"
+        ],
+        "limitations": [
+          "Potential computational overhead of modeling uncertainty directly in high-dimensional feature spaces",
+          "Performance may be sensitive to the selection and validity of the chosen structural constraints"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16172v1",
+      "title": "Structured Hints for Sample-Efficient Lean Theorem Proving",
+      "analysis": {
+        "ai_subcategory": "Theorem Proving / NLP",
+        "methodology": "Inference-time structural guidance using a fixed prompt schedule of tactic skeletons",
+        "key_contribution": "Demonstrates that simple structural hints significantly improve the performance and sample efficiency of RL-trained neural theorem provers on formal benchmarks.",
+        "technical_keywords": [
+          "Lean theorem proving",
+          "tactic skeletons",
+          "inference-time guidance",
+          "sample efficiency",
+          "miniF2F benchmark"
+        ],
+        "novelty_score": 7,
+        "practical_applications": [
+          "Automated formal verification",
+          "Computer-assisted mathematical proofs",
+          "Optimization of LLM-based reasoning workflows"
+        ],
+        "limitations": [
+          "Relies on a fixed set of 15 tactic skeletons",
+          "Evaluated only on the miniF2F benchmark",
+          "Potential lack of generalization to proofs requiring non-standard structural patterns"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16163v1",
+      "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
+      "analysis": {
+        "ai_subcategory": "CV/RL",
+        "methodology": "Single-stage fine-tuning of a pretrained video diffusion model to represent actions, future states, and values as latent frames within the diffusion process.",
+        "key_contribution": "Adapts a large-scale video generation model into a unified robot policy and world model by encoding actions and rewards as latent frames, enabling both direct control and model-based planning without architectural changes.",
+        "technical_keywords": [
+          "Latent Diffusion",
+          "Video Foundation Models",
+          "Visuomotor Control",
+          "World Models",
+          "Bimanual Manipulation"
+        ],
+        "novelty_score": 9,
+        "practical_applications": [
+          "Autonomous robotic manipulation",
+          "Industrial bimanual automation",
+          "Visual-based trajectory planning"
+        ],
+        "limitations": [
+          "High computational cost of diffusion-based inference",
+          "Heavy reliance on high-quality robot demonstration data for specific platforms"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16150v1",
+      "title": "Pay (Cross) Attention to the Melody: Curriculum Masking for Single-Encoder Melodic Harmonization",
+      "analysis": {
+        "ai_subcategory": "ML / Audio Processing",
+        "methodology": "Single-encoder Transformer utilizing a 'Full-to-Full' (FF) curriculum masking strategy for masked sequence modeling.",
+        "key_contribution": "Introduces the FF training curriculum that maintains fully masked harmony sequences in initial stages to significantly strengthen melody-harmony interactions and improve out-of-domain performance.",
+        "technical_keywords": [
+          "Melodic Harmonization",
+          "Curriculum Learning",
+          "Masked Sequence Modeling",
+          "Transformer",
+          "Cross-Attention"
+        ],
+        "novelty_score": 7,
+        "practical_applications": [
+          "AI-driven musical accompaniment generation",
+          "Assistive songwriting and composition tools",
+          "Automated harmony generation for jazz and pop music"
+        ],
+        "limitations": [
+          "Sensitivity to temporal quantization parameters",
+          "Performance dependency on specific melody representations like pitch-class"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16147v1",
+      "title": "Beat-ssl: Capturing Local ECG Morphology through Heartbeat-level Contrastive Learning with Soft Targets",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Dual-context self-supervised contrastive learning using rhythm-level and heartbeat-level features with soft targets.",
+        "key_contribution": "Introduces Beat-SSL, a framework that captures both global rhythm and local ECG morphology by utilizing soft contrastive targets across different signal granularities.",
+        "technical_keywords": [
+          "Contrastive Learning",
+          "ECG Morphology",
+          "Soft Targets",
+          "Self-Supervised Learning",
+          "Heartbeat-level Representation"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Automated ECG multilabel classification",
+          "Precise ECG signal segmentation",
+          "Cardiac health monitoring in data-scarce environments"
+        ],
+        "limitations": [
+          "Requires heartbeat-level data granularity",
+          "Underperforms compared to larger foundation models in global rhythm classification tasks"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16142v1",
+      "title": "Computing Fixpoints of Learned Functions: Chaotic Iteration and Simple Stochastic Games",
+      "analysis": {
+        "ai_subcategory": "RL / Formal Methods",
+        "methodology": "Generalized dampened Mann iteration and chaotic iteration",
+        "key_contribution": "Introduces a flexible iteration scheme for computing fixpoints of approximated functions that supports chaotic updates and extends applicability to simple stochastic games.",
+        "technical_keywords": [
+          "Fixpoint iteration",
+          "Dampened Mann iteration",
+          "Chaotic iteration",
+          "Simple stochastic games",
+          "Function approximation"
+        ],
+        "novelty_score": 7,
+        "practical_applications": [
+          "Computing expected payoffs in probabilistic models",
+          "Quantitative system semantics",
+          "High-dimensional fixpoint computation"
+        ],
+        "limitations": [
+          "Restricted to functions over non-negative reals",
+          "Convergence speed is dependent on the specific choice of learning rate parameters"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2601.16140v1",
+      "title": "Learning to Watermark in the Latent Space of Generative Models",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Latent space watermarking using knowledge distillation to integrate post-hoc watermarking models directly into the generative model or its latent decoder.",
+        "key_contribution": "Introduced DistSeal, a unified latent space watermarking approach that achieves up to 20x speedup and improved robustness by distilling watermarkers into diffusion and autoregressive models.",
+        "technical_keywords": [
+          "Latent Space",
+          "Generative Models",
+          "Watermarking",
+          "Knowledge Distillation",
+          "Diffusion Models"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "AI-generated content authentication",
+          "Intellectual property protection for foundation models",
+          "Automated deepfake detection"
+        ],
+        "limitations": [
+          "Requires access to the generative model's internal latent representation or decoder",
+          "Robustness may vary across different types of post-generation adversarial attacks"
+        ]
+      },
+      "processed_with_url": false
+    }
+  ]
+}

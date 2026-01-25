@@ -1,0 +1,364 @@
+{
+  "status": "success",
+  "papers_count": 15,
+  "papers": [
+    {
+      "id": 1,
+      "arxiv_id": "2601.16211v1",
+      "fetched_date": "2026-01-25T10:51:29.015336",
+      "published": "2026-01-22T18:59:13+00:00",
+      "title": "Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition",
+      "authors": [
+        "Geo Ahn",
+        "Inwoong Lee",
+        "Taeoh Kim",
+        "Minho Shim",
+        "Dongyoon Wee",
+        "Jinwoo Choi"
+      ],
+      "summary": "We study Compositional Video Understanding (CVU), where models must recognize verbs and objects and compose them to generalize to unseen combinations. We find that existing Zero-Shot Compositional Action Recognition (ZS-CAR) models fail primarily due to an overlooked failure mode: object-driven verb shortcuts. Through systematic analysis, we show that this behavior arises from two intertwined factors: severe sparsity and skewness of compositional supervision, and the asymmetric learning difficulty between verbs and objects. As training progresses, the existing ZS-CAR model increasingly ignores visual evidence and overfits to co-occurrence statistics. Consequently, the existing model does not gain the benefit of compositional recognition in unseen verb-object compositions. To address this, we propose RCORE, a simple and effective framework that enforces temporally grounded verb learning. RCORE introduces (i) a composition-aware augmentation that diversifies verb-object combinations without corrupting motion cues, and (ii) a temporal order regularization loss that penalizes shortcut behaviors by explicitly modeling temporal structure. Across two benchmarks, Sth-com and our newly constructed EK100-com, RCORE significantly improves unseen composition accuracy, reduces reliance on co-occurrence bias, and achieves consistently positive compositional gaps. Our findings reveal object-driven shortcuts as a critical limiting factor in ZS-CAR and demonstrate that addressing them is essential for robust compositional video understanding.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16211v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16211v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16211v1"
+    },
+    {
+      "id": 2,
+      "arxiv_id": "2601.16210v1",
+      "fetched_date": "2026-01-25T10:51:29.015509",
+      "published": "2026-01-22T18:58:55+00:00",
+      "title": "PyraTok: Language-Aligned Pyramidal Tokenizer for Video Understanding and Generation",
+      "authors": [
+        "Onkar Susladkar",
+        "Tushar Prakash",
+        "Adheesh Juvekar",
+        "Kiet A. Nguyen",
+        "Dong-Hwan Jang",
+        "Inderjit S Dhillon",
+        "Ismini Lourentzou"
+      ],
+      "summary": "Discrete video VAEs underpin modern text-to-video generation and video understanding systems, yet existing tokenizers typically learn visual codebooks at a single scale with limited vocabularies and shallow language supervision, leading to poor cross-modal alignment and zero-shot transfer. We introduce PyraTok, a language-aligned pyramidal tokenizer that learns semantically structured discrete latents across multiple spatiotemporal resolutions. PyraTok builds on a pretrained video VAE and a novel Language aligned Pyramidal Quantization (LaPQ) module that discretizes encoder features at several depths using a shared large binary codebook, yielding compact yet expressive video token sequences. To tightly couple visual tokens with language, PyraTok jointly optimizes multi-scale text-guided quantization and a global autoregressive objective over the token hierarchy. Across ten benchmarks, PyraTok delivers state-of-the-art (SOTA) video reconstruction, consistently improves text-to-video quality, and sets new SOTA zero-shot performance on video segmentation, temporal action localization, and video understanding, scaling robustly to up to 4K8K resolutions.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16210v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16210v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16210v1"
+    },
+    {
+      "id": 3,
+      "arxiv_id": "2601.16206v1",
+      "fetched_date": "2026-01-25T10:51:29.015580",
+      "published": "2026-01-22T18:57:09+00:00",
+      "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+      "authors": [
+        "Daixuan Cheng",
+        "Shaohan Huang",
+        "Yuxian Gu",
+        "Huatong Song",
+        "Guoxin Chen",
+        "Li Dong",
+        "Wayne Xin Zhao",
+        "Ji-Rong Wen",
+        "Furu Wei"
+      ],
+      "summary": "We introduce LLM-in-Sandbox, enabling LLMs to explore within a code sandbox (i.e., a virtual computer), to elicit general intelligence in non-code domains. We first demonstrate that strong LLMs, without additional training, exhibit generalization capabilities to leverage the code sandbox for non-code tasks. For example, LLMs spontaneously access external resources to acquire new knowledge, leverage the file system to handle long contexts, and execute scripts to satisfy formatting requirements. We further show that these agentic capabilities can be enhanced through LLM-in-Sandbox Reinforcement Learning (LLM-in-Sandbox-RL), which uses only non-agentic data to train models for sandbox exploration. Experiments demonstrate that LLM-in-Sandbox, in both training-free and post-trained settings, achieves robust generalization spanning mathematics, physics, chemistry, biomedicine, long-context understanding, and instruction following. Finally, we analyze LLM-in-Sandboxs efficiency from computational and system perspectives, and open-source it as a Python package to facilitate real-world deployment.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16206v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16206v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16206v1"
+    },
+    {
+      "id": 4,
+      "arxiv_id": "2601.16205v1",
+      "fetched_date": "2026-01-25T10:51:29.015640",
+      "published": "2026-01-22T18:56:14+00:00",
+      "title": "Counterfactual Training: Teaching Models Plausible and Actionable Explanations",
+      "authors": [
+        "Patrick Altmeyer",
+        "Aleksander Buszydlik",
+        "Arie van Deursen",
+        "Cynthia C. S. Liem"
+      ],
+      "summary": "We propose a novel training regime termed counterfactual training that leverages counterfactual explanations to increase the explanatory capacity of models. Counterfactual explanations have emerged as a popular post-hoc explanation method for opaque machine learning models: they inform how factual inputs would need to change in order for a model to produce some desired output. To be useful in real-world decision-making systems, counterfactuals should be plausible with respect to the underlying data and actionable with respect to the feature mutability constraints. Much existing research has therefore focused on developing post-hoc methods to generate counterfactuals that meet these desiderata. In this work, we instead hold models directly accountable for the desired end goal: counterfactual training employs counterfactuals during the training phase to minimize the divergence between learned representations and plausible, actionable explanations. We demonstrate empirically and theoretically that our proposed method facilitates training models that deliver inherently desirable counterfactual explanations and additionally exhibit improved adversarial robustness.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16205v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16205v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16205v1"
+    },
+    {
+      "id": 5,
+      "arxiv_id": "2601.16200v1",
+      "fetched_date": "2026-01-25T10:51:29.015701",
+      "published": "2026-01-22T18:52:21+00:00",
+      "title": "Provable Robustness in Multimodal Large Language Models via Feature Space Smoothing",
+      "authors": [
+        "Song Xia",
+        "Meiwen Ding",
+        "Chenqi Kong",
+        "Wenhan Yang",
+        "Xudong Jiang"
+      ],
+      "summary": "Multimodal large language models (MLLMs) exhibit strong capabilities across diverse applications, yet remain vulnerable to adversarial perturbations that distort their feature representations and induce erroneous predictions. To address this vulnerability, we propose the Feature-space Smoothing (FS) and theoretically prove that FS offers certified robustness on the feature representations of MLLMs. Specifically, FS transforms any feature encoder into a smoothed variant that is guaranteed to maintain a certified lower bound on the feature cosine similarity between clean and adversarial representations under ell_2-bounded attacks. Moreover, we indicate that the value of this Feature Cosine Similarity Bound (FCSB) derived from FS can be improved by enlarging the defined Gaussian robustness score on the vanilla encoder. Building upon this, we introduce the Purifier and Smoothness Mapper (PSM), a plug-and-play module that improves the Gaussian robustness score of MLLMs and thus enhances their certified robustness under FS, without requiring any retraining on MLLMs. We demonstrate that the FS with PSM not only provides a strong theoretical robustness guarantee but also exhibits superior empirical performance compared to adversarial training. Extensive experiments across diverse MLLMs and downstream tasks indicate the effectiveness of the FS-PSM, reducing the Attack Success Rate (ASR) of various white-box attacks from nearly 90 to about 1.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16200v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16200v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16200v1"
+    },
+    {
+      "id": 6,
+      "arxiv_id": "2601.16194v1",
+      "fetched_date": "2026-01-25T10:51:29.015774",
+      "published": "2026-01-22T18:46:46+00:00",
+      "title": "A Rolling-Space Branch-and-Price Algorithm for the Multi-Compartment Vehicle Routing Problem with Multiple Time Windows",
+      "authors": [
+        "El Mehdi Er Raqabi",
+        "Kevin Dalmeijer",
+        "Pascal Van Hentenryck"
+      ],
+      "summary": "This paper investigates the multi-compartment vehicle routing problem with multiple time windows (MCVRPMTW), an extension of the classical vehicle routing problem with time windows that considers vehicles equipped with multiple compartments and customers requiring service across several delivery time windows. The problem incorporates three key compartment-related features: (i) compartment flexibility in the number of compartments, (ii) item-to-compartment compatibility, and (iii) item-to-item compatibility. The problem also accommodates practical operational requirements such as driver breaks. To solve the MCVRPMTW, we develop an exact branch-and-price (BP) algorithm in which the pricing problem is solved using a labeling algorithm. Several acceleration strategies are introduced to limit symmetry during label extensions, improve the stability of dual solutions in column generation, and enhance the branching process. To handle large-scale instances, we propose a rolling-space BP algorithm that integrates clustering techniques into the solution framework. Extensive computational experiments on instances inspired by a real-world industrial application demonstrate the effectiveness of the proposed approach and provide useful managerial insights for practical implementation.",
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16194v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16194v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16194v1"
+    },
+    {
+      "id": 7,
+      "arxiv_id": "2601.16175v1",
+      "fetched_date": "2026-01-25T10:51:29.015841",
+      "published": "2026-01-22T18:24:00+00:00",
+      "title": "Learning to Discover at Test Time",
+      "authors": [
+        "Mert Yuksekgonul",
+        "Daniel Koceja",
+        "Xinhao Li",
+        "Federico Bianchi",
+        "Jed McCaleb",
+        "Xiaolong Wang",
+        "Jan Kautz",
+        "Yejin Choi",
+        "James Zou",
+        "Carlos Guestrin",
+        "Yu Sun"
+      ],
+      "summary": "How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the test problem. This form of continual learning is quite special, because its goal is to produce one great solution rather than many good ones on average, and to solve this very problem rather than generalize to other problems. Therefore, our learning objective and search subroutine are designed to prioritize the most promising solutions. We call this method Test-Time Training to Discover (TTT-Discover). Following prior work, we focus on problems with continuous rewards. We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology. TTT-Discover sets the new state of the art in almost all of them: (i) Erdős minimum overlap problem and an autocorrelation inequality; (ii) a GPUMode kernel competition (up to 2times faster than prior art); (iii) past AtCoder algorithm competitions; and (iv) denoising problem in single-cell analysis. Our solutions are reviewed by experts or the organizers. All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models. Our test-time training runs are performed using Tinker, an API by Thinking Machines, with a cost of only a few hundred dollars per problem.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16175v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16175v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16175v1"
+    },
+    {
+      "id": 8,
+      "arxiv_id": "2601.16174v1",
+      "fetched_date": "2026-01-25T10:51:29.015924",
+      "published": "2026-01-22T18:19:52+00:00",
+      "title": "Beyond Predictive Uncertainty: Reliable Representation Learning with Structural Constraints",
+      "authors": [
+        "Yiyao Yang"
+      ],
+      "summary": "Uncertainty estimation in machine learning has traditionally focused on the prediction stage, aiming to quantify confidence in model outputs while treating learned representations as deterministic and reliable by default. In this work, we challenge this implicit assumption and argue that reliability should be regarded as a first-class property of learned representations themselves. We propose a principled framework for reliable representation learning that explicitly models representation-level uncertainty and leverages structural constraints as inductive biases to regularize the space of feasible representations. Our approach introduces uncertainty-aware regularization directly in the representation space, encouraging representations that are not only predictive but also stable, well-calibrated, and robust to noise and structural perturbations. Structural constraints, such as sparsity, relational structure, or feature-group dependencies, are incorporated to define meaningful geometry and reduce spurious variability in learned representations, without assuming fully correct or noise-free structure. Importantly, the proposed framework is independent of specific model architectures and can be integrated with a wide range of representation learning methods.",
+      "primary_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16174v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16174v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16174v1"
+    },
+    {
+      "id": 9,
+      "arxiv_id": "2601.16172v1",
+      "fetched_date": "2026-01-25T10:51:29.015982",
+      "published": "2026-01-22T18:16:46+00:00",
+      "title": "Structured Hints for Sample-Efficient Lean Theorem Proving",
+      "authors": [
+        "Zachary Burton"
+      ],
+      "summary": "State-of-the-art neural theorem provers like DeepSeek-Prover-V1.5 combine large language models with reinforcement learning, achieving impressive results through sophisticated training. We ask: do these highly-trained models still benefit from simple structural guidance at inference time? We evaluate a lightweight intervention -- a fixed prompt schedule over 15 common tactic skeletons -- on the miniF2F benchmark. This simple approach yields 21.7 pass16 compared to 15.2 for standard sampling from the same model, a 43 relative improvement using the same number of samples (k16) and same maximum generation length (1024 tokens). Our results suggest that even capable RL-trained provers underutilize structural priors available in the tactic language, and that simple inference-time guidance remains a cheap, complementary boost.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16172v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16172v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16172v1"
+    },
+    {
+      "id": 10,
+      "arxiv_id": "2601.16163v1",
+      "fetched_date": "2026-01-25T10:51:29.016038",
+      "published": "2026-01-22T18:09:30+00:00",
+      "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
+      "authors": [
+        "Moo Jin Kim",
+        "Yihuai Gao",
+        "Tsung-Yi Lin",
+        "Yen-Chen Lin",
+        "Yunhao Ge",
+        "Grace Lam",
+        "Percy Liang",
+        "Shuran Song",
+        "Ming-Yu Liu",
+        "Chelsea Finn",
+        "Jinwei Gu"
+      ],
+      "summary": "Recent video generation models demonstrate remarkable ability to capture complex physical interactions and scene evolution over time. To leverage their spatiotemporal priors, robotics works have adapted video models for policy learning but introduce complexity by requiring multiple stages of post-training and new architectural components for action generation. In this work, we introduce Cosmos Policy, a simple approach for adapting a large pretrained video model (Cosmos-Predict2) into an effective robot policy through a single stage of post-training on the robot demonstration data collected on the target platform, with no architectural modifications. Cosmos Policy learns to directly generate robot actions encoded as latent frames within the video models latent diffusion process, harnessing the models pretrained priors and core learning algorithm to capture complex action distributions. Additionally, Cosmos Policy generates future state images and values (expected cumulative rewards), which are similarly encoded as latent frames, enabling test-time planning of action trajectories with higher likelihood of success. In our evaluations, Cosmos Policy achieves state-of-the-art performance on the LIBERO and RoboCasa simulation benchmarks (98.5 and 67.1 average success rates, respectively) and the highest average score in challenging real-world bimanual manipulation tasks, outperforming strong diffusion policies trained from scratch, video model-based policies, and state-of-the-art vision-language-action models fine-tuned on the same robot demonstrations. Furthermore, given policy rollout data, Cosmos Policy can learn from experience to refine its world model and value function and leverage model-based planning to achieve even higher success rates in challenging tasks. We release code, models, and training data at https:research.nvidia.comlabsdircosmos-policy",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16163v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16163v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16163v1"
+    },
+    {
+      "id": 11,
+      "arxiv_id": "2601.16158v1",
+      "fetched_date": "2026-01-25T10:51:29.016119",
+      "published": "2026-01-22T17:59:31+00:00",
+      "title": "Domain-Incremental Continual Learning for Robust and Efficient Keyword Spotting in Resource Constrained Systems",
+      "authors": [
+        "Prakash Dhungana",
+        "Sayed Ahmad Salehi"
+      ],
+      "summary": "Keyword Spotting (KWS) systems with small footprint models deployed on edge devices face significant accuracy and robustness challenges due to domain shifts caused by varying noise and recording conditions. To address this, we propose a comprehensive framework for continual learning designed to adapt to new domains while maintaining computational efficiency. The proposed pipeline integrates a dual-input Convolutional Neural Network, utilizing both Mel Frequency Cepstral Coefficients (MFCC) and Mel-spectrogram features, supported by a multi-stage denoising process, involving discrete wavelet transform and spectral subtraction techniques, plus model and prototype update blocks. Unlike prior methods that restrict updates to specific layers, our approach updates the complete quantized model, made possible due to compact model architecture. A subset of input samples are selected during runtime using class prototypes and confidence-driven filtering, which are then pseudo-labeled and combined with rehearsal buffer for incremental model retraining. Experimental results on noisy test dataset demonstrate the frameworks effectiveness, achieving 99.63 accuracy on clean data and maintaining robust performance (exceeding 94 accuracy) across diverse noisy environments, even at -10 dB Signal-to-Noise Ratio. The proposed framework work confirms that integrating efficient denoising with prototype-based continual learning enables KWS models to operate autonomously and robustly in resource-constrained, dynamic environments.",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16158v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16158v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16158v1"
+    },
+    {
+      "id": 12,
+      "arxiv_id": "2601.16150v1",
+      "fetched_date": "2026-01-25T10:51:29.016191",
+      "published": "2026-01-22T17:46:31+00:00",
+      "title": "Pay (Cross) Attention to the Melody: Curriculum Masking for Single-Encoder Melodic Harmonization",
+      "authors": [
+        "Maximos Kaliakatsos-Papakostas",
+        "Dimos Makris",
+        "Konstantinos Soiledis",
+        "Konstantinos-Theodoros Tsamis",
+        "Vassilis Katsouros",
+        "Emilios Cambouropoulos"
+      ],
+      "summary": "Melodic harmonization, the task of generating harmonic accompaniments for a given melody, remains a central challenge in computational music generation. Recent single encoder transformer approaches have framed harmonization as a masked sequence modeling problem, but existing training curricula inspired by discrete diffusion often result in weak (cross) attention between melody and harmony. This leads to limited exploitation of melodic cues, particularly in out-of-domain contexts. In this work, we introduce a training curriculum, FF (full-to-full), which keeps all harmony tokens masked for several training steps before progressively unmasking entire sequences during training to strengthen melody-harmony interactions. We systematically evaluate this approach against prior curricula across multiple experimental axes, including temporal quantization (quarter vs. sixteenth note), bar-level vs. time-signature conditioning, melody representation (full range vs. pitch class), and inference-time unmasking strategies. Models are trained on the HookTheory dataset and evaluated both in-domain and on a curated collection of jazz standards, using a comprehensive set of metrics that assess chord progression structure, harmony-melody alignment, and rhythmic coherence. Results demonstrate that the proposed FF curriculum consistently outperforms baselines in nearly all metrics, with particularly strong gains in out-of-domain evaluations where harmonic adaptability to novel melodic queues is crucial. We further find that quarter-note quantization, intertwining of bar tokens, and pitch-class melody representations are advantageous in the FF setting. Our findings highlight the importance of training curricula in enabling effective melody conditioning and suggest that full-to-full unmasking offers a robust strategy for single encoder harmonization.",
+      "primary_category": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16150v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16150v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16150v1"
+    },
+    {
+      "id": 13,
+      "arxiv_id": "2601.16147v1",
+      "fetched_date": "2026-01-25T10:51:29.016268",
+      "published": "2026-01-22T17:40:23+00:00",
+      "title": "Beat-ssl: Capturing Local ECG Morphology through Heartbeat-level Contrastive Learning with Soft Targets",
+      "authors": [
+        "Muhammad Ilham Rizqyawan",
+        "Peter Macfarlane",
+        "Stathis Hadjidemetriou",
+        "Fani Deligianni"
+      ],
+      "summary": "Obtaining labelled ECG data for developing supervised models is challenging. Contrastive learning (CL) has emerged as a promising pretraining approach that enables effective transfer learning with limited labelled data. However, existing CL frameworks either focus solely on global context or fail to exploit ECG-specific characteristics. Furthermore, these methods rely on hard contrastive targets, which may not adequately capture the continuous nature of feature similarity in ECG signals. In this paper, we propose Beat-SSL, a contrastive learning framework that performs dual-context learning through both rhythm-level and heartbeat-level contrasting with soft targets. We evaluated our pretrained model on two downstream tasks: 1) multilabel classification for global rhythm assessment, and 2) ECG segmentation to assess its capacity to learn representations across both contexts. We conducted an ablation study and compared the best configuration with three other methods, including one ECG foundation model. Despite the foundation models broader pretraining, Beat-SSL reached 93 of its performance in multilabel classification task and surpassed all other methods in the segmentation task by 4.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16147v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16147v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16147v1"
+    },
+    {
+      "id": 14,
+      "arxiv_id": "2601.16142v1",
+      "fetched_date": "2026-01-25T10:51:29.016329",
+      "published": "2026-01-22T17:36:19+00:00",
+      "title": "Computing Fixpoints of Learned Functions: Chaotic Iteration and Simple Stochastic Games",
+      "authors": [
+        "Paolo Baldan",
+        "Sebastian Gurke",
+        "Barbara König",
+        "Florian Wittbold"
+      ],
+      "summary": "The problem of determining the (least) fixpoint of (higher-dimensional) functions over the non-negative reals frequently occurs when dealing with systems endowed with a quantitative semantics. We focus on the situation in which the functions of interest are not known precisely but can only be approximated. As a first contribution we generalize an iteration scheme called dampened Mann iteration, recently introduced in the literature. The improved scheme relaxes previous constraints on parameter sequences, allowing learning rates to converge to zero or not converge at all. While seemingly minor, this flexibility is essential to enable the implementation of chaotic iterations, where only a subset of components is updated in each step, allowing to tackle higher-dimensional problems. Additionally, by allowing learning rates to converge to zero, we can relax conditions on the convergence speed of function approximations, making the method more adaptable to various scenarios. We also show that dampened Mann iteration applies immediately to compute the expected payoff in various probabilistic models, including simple stochastic games, not covered by previous work.",
+      "primary_category": "cs.LO",
+      "categories": [
+        "cs.LO",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16142v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16142v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16142v1"
+    },
+    {
+      "id": 15,
+      "arxiv_id": "2601.16140v1",
+      "fetched_date": "2026-01-25T10:51:29.016398",
+      "published": "2026-01-22T17:34:30+00:00",
+      "title": "Learning to Watermark in the Latent Space of Generative Models",
+      "authors": [
+        "Sylvestre-Alvise Rebuffi",
+        "Tuan Tran",
+        "Valeriu Lacatusu",
+        "Pierre Fernandez",
+        "Tomáš Souček",
+        "Nikola Jovanović",
+        "Tom Sander",
+        "Hady Elsahar",
+        "Alexandre Mourachko"
+      ],
+      "summary": "Existing approaches for watermarking AI-generated images often rely on post-hoc methods applied in pixel space, introducing computational overhead and potential visual artifacts. In this work, we explore latent space watermarking and introduce DistSeal, a unified approach for latent watermarking that works across both diffusion and autoregressive models. Our approach works by training post-hoc watermarking models in the latent space of generative models. We demonstrate that these latent watermarkers can be effectively distilled either into the generative model itself or into the latent decoder, enabling in-model watermarking. The resulting latent watermarks achieve competitive robustness while offering similar imperceptibility and up to 20x speedup compared to pixel-space baselines. Our experiments further reveal that distilling latent watermarkers outperforms distilling pixel-space ones, providing a solution that is both more efficient and more robust.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2601.16140v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2601.16140v1",
+      "arxiv_url": "https://arxiv.org/abs/2601.16140v1"
+    }
+  ],
+  "query_used": "(cat:cs.AI OR cat:cs.LG OR cat:cs.CL) AND (large language models OR transformers OR attention mechanism)",
+  "categories_searched": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ]
+}

@@ -1,0 +1,42 @@
+# Tools Configuration.
+
+tools:
+  arxiv_fetcher:
+    name: "ArxivPaperFetcher"
+    description: "Fetch recent AI papers from arXiv with abstracts and ar5iv URLs"
+    class_path: "src.tools.arxiv_tool.ArxivTool"
+    config:
+      default_max_results: 50
+      include_ar5iv_urls: true
+      include_pdf_urls: false
+      output_format: "json"
+      clean_abstracts: true
+      supported_categories:
+        - "cs.AI"
+        - "cs.LG"
+        - "cs.CL"
+        - "cs.CV"
+        - "cs.NE"
+        - "stat.ML"
+      
+  gemini_analyzer:
+    name: "GeminiAnalyzer"
+    description: "Analyze research papers using Gemini Flash API"
+    class_path: "src.tools.gemini_tool.GeminiTool"
+    config:
+      batch_size: 5
+      use_url_context: true
+      analysis_template: "research_paper_analysis"
+      output_schema: "structured_analysis"
+      retry_on_rate_limit: true
+      rate_limit_delay: 4
+      
+  trend_detector:
+    name: "TrendDetector"  
+    description: "Detect patterns and trends in research papers"
+    class_path: "src.tools.trend_tool.TrendTool"
+    config:
+      clustering_method: "kmeans"
+      min_cluster_size: 3
+      similarity_threshold: 0.7
+      use_gemini_embeddings: true

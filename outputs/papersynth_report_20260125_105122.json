@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "generation_date": "2026-01-25T10:53:40.257531",
+    "papersynth_version": "1.0.0",
+    "query_used": "(cat:cs.AI OR cat:cs.LG OR cat:cs.CL) AND (large language models OR transformers OR attention mechanism)",
+    "categories_searched": [
+      "cs.AI",
+      "cs.LG",
+      "cs.CL"
+    ]
+  },
+  "summary": {
+    "total_papers_found": 15,
+    "papers_analyzed": 14,
+    "success_rate": "93.3%"
+  },
+  "trends": {
+    "ai_categories": {
+      "CV": 3,
+      "ML": 3,
+      "NLP, Reinforcement Learning, Agentic AI": 1,
+      "Multimodal Learning (CV/NLP)": 1,
+      "Optimization/Operations Research": 1,
+      "RL/ML": 1,
+      "Theorem Proving / NLP": 1,
+      "CV/RL": 1,
+      "ML / Audio Processing": 1,
+      "RL / Formal Methods": 1
+    },
+    "top_keywords": {
+      "Reinforcement Learning": 2,
+      "Zero-Shot Compositional Action Recognition": 1,
+      "Object-driven shortcuts": 1,
+      "Temporal order regularization": 1,
+      "Composition-aware augmentation": 1,
+      "Video Understanding": 1,
+      "Discrete Video VAE": 1,
+      "Pyramidal Quantization": 1,
+      "Cross-modal Alignment": 1,
+      "Video Tokenization": 1,
+      "Spatiotemporal Resolutions": 1,
+      "LLM Agent": 1,
+      "Code Sandbox": 1,
+      "Agentic Intelligence": 1,
+      "Tool-use": 1
+    },
+    "methodologies": {
+      "The RCORE framework, utilizing composition-aware data augmentation and temporal order regularization loss to enforce temporally grounded verb learning.": 1,
+      "Language-aligned Pyramidal Quantization (LaPQ) with multi-scale discretization and a shared large binary codebook.": 1,
+      "Integrating LLMs into a virtual computer sandbox environment combined with Reinforcement Learning (LLM-in-Sandbox-RL) using non-agentic data.": 1,
+      "Counterfactual training regime that integrates counterfactual generation into the optimization process to minimize divergence between learned representations and plausible/actionable explanations.": 1,
+      "Feature-space Smoothing (FS) and Purifier and Smoothness Mapper (PSM)": 1,
+      "Branch-and-Price (BP) algorithm with a rolling-space strategy, labeling-based pricing, and clustering techniques.": 1,
+      "Reinforcement learning at test time (TTT) to specialize a Large Language Model on a single problem instance using continuous rewards.": 1,
+      "Uncertainty-aware regularization and structural inductive biases applied to representation spaces": 1,
+      "Inference-time structural guidance using a fixed prompt schedule of tactic skeletons": 1,
+      "Single-stage fine-tuning of a pretrained video diffusion model to represent actions, future states, and values as latent frames within the diffusion process.": 1,
+      "Single-encoder Transformer utilizing a 'Full-to-Full' (FF) curriculum masking strategy for masked sequence modeling.": 1,
+      "Dual-context self-supervised contrastive learning using rhythm-level and heartbeat-level features with soft targets.": 1,
+      "Generalized dampened Mann iteration and chaotic iteration": 1,
+      "Latent space watermarking using knowledge distillation to integrate post-hoc watermarking models directly into the generative model or its latent decoder.": 1
+    },
+    "avg_novelty_score": 7.928571428571429,
+    "novelty_distribution": {
+      "8": 9,
+      "7": 3,
+      "9": 2
+    }
+  },
+  "insights": {
+    "dominant_category": "CV",
+    "emerging_keywords": [
+      "Reinforcement Learning",
+      "Zero-Shot Compositional Action Recognition",
+      "Object-driven shortcuts",
+      "Temporal order regularization",
+      "Composition-aware augmentation"
+    ],
+    "innovation_level": "High"
+  },
+  "sample_papers": [
+    {
+      "title": "Why Can't I Open My Drawer? Mitigating Object-Driven Shortcuts in Zero-Shot Compositional Action Recognition",
+      "arxiv_id": "2601.16211v1",
+      "authors": [],
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "The RCORE framework, utilizing composition-aware data augmentation and temporal order regularization loss to enforce temporally grounded verb learning.",
+        "key_contribution": "Identifies and mitigates object-driven verb shortcuts in zero-shot compositional action recognition by diversifying verb-object combinations and penalizing shortcut behaviors through temporal modeling.",
+        "technical_keywords": [
+          "Zero-Shot Compositional Action Recognition",
+          "Object-driven shortcuts",
+          "Temporal order regularization",
+          "Composition-aware augmentation",
+          "Video Understanding"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Video search and retrieval",
+          "Instruction-based robotic manipulation",
+          "Automated video activity analysis"
+        ],
+        "limitations": [
+          "Effectiveness may depend on the quality of temporal cues in the video",
+          "Potential computational overhead from composition-aware augmentation"
+        ]
+      }
+    },
+    {
+      "title": "PyraTok: Language-Aligned Pyramidal Tokenizer for Video Understanding and Generation",
+      "arxiv_id": "2601.16210v1",
+      "authors": [],
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Language-aligned Pyramidal Quantization (LaPQ) with multi-scale discretization and a shared large binary codebook.",
+        "key_contribution": "Introduces a pyramidal video tokenizer that produces semantically structured discrete latents across multiple spatiotemporal resolutions to improve cross-modal alignment and zero-shot transfer.",
+        "technical_keywords": [
+          "Discrete Video VAE",
+          "Pyramidal Quantization",
+          "Cross-modal Alignment",
+          "Video Tokenization",
+          "Spatiotemporal Resolutions"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Text-to-video generation",
+          "Zero-shot video segmentation",
+          "Temporal action localization",
+          "High-resolution video understanding"
+        ],
+        "limitations": [
+          "Increased computational overhead for multi-scale feature processing",
+          "Potential reliance on high-quality text-video paired data for the LaPQ module"
+        ]
+      }
+    },
+    {
+      "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+      "arxiv_id": "2601.16206v1",
+      "authors": [],
+      "analysis": {
+        "ai_subcategory": "NLP, Reinforcement Learning, Agentic AI",
+        "methodology": "Integrating LLMs into a virtual computer sandbox environment combined with Reinforcement Learning (LLM-in-Sandbox-RL) using non-agentic data.",
+        "key_contribution": "Introduces a framework that enables LLMs to leverage code sandbox exploration to solve complex tasks in non-code domains such as science, long-context processing, and instruction following.",
+        "technical_keywords": [
+          "LLM Agent",
+          "Code Sandbox",
+          "Reinforcement Learning",
+          "Agentic Intelligence",
+          "Tool-use"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Automated scientific reasoning in physics, chemistry, and biomedicine",
+          "Management of long-context data through file system interactions",
+          "Complex task automation through script execution and knowledge retrieval"
+        ],
+        "limitations": [
+          "Computational and system overhead of running virtual environments",
+          "Dependence on the base model's inherent ability to generate and execute code",
+          "Potential safety and security risks inherent in autonomous code execution"
+        ]
+      }
+    },
+    {
+      "title": "Counterfactual Training: Teaching Models Plausible and Actionable Explanations",
+      "arxiv_id": "2601.16205v1",
+      "authors": [],
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Counterfactual training regime that integrates counterfactual generation into the optimization process to minimize divergence between learned representations and plausible/actionable explanations.",
+        "key_contribution": "A novel training framework that ensures machine learning models provide inherently plausible and actionable counterfactual explanations while simultaneously enhancing adversarial robustness.",
+        "technical_keywords": [
+          "Counterfactual Explanations",
+          "Explainable AI (XAI)",
+          "Counterfactual Training",
+          "Adversarial Robustness",
+          "Feature Mutability"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Automated credit scoring providing actionable recourse",
+          "Medical decision support systems for treatment planning",
+          "Algorithmic auditing for regulatory compliance"
+        ],
+        "limitations": [
+          "Increased computational complexity during the training phase",
+          "Dependence on the accuracy of predefined feature mutability and plausibility constraints"
+        ]
+      }
+    },
+    {
+      "title": "Provable Robustness in Multimodal Large Language Models via Feature Space Smoothing",
+      "arxiv_id": "2601.16200v1",
+      "authors": [],
+      "analysis": {
+        "ai_subcategory": "Multimodal Learning (CV/NLP)",
+        "methodology": "Feature-space Smoothing (FS) and Purifier and Smoothness Mapper (PSM)",
+        "key_contribution": "Provides a theoretically proven robustness framework for MLLMs that guarantees a certified lower bound on feature cosine similarity under adversarial attacks without requiring model retraining.",
+        "technical_keywords": [
+          "Multimodal Large Language Models",
+          "Certified Robustness",
+          "Feature-space Smoothing",
+          "Feature Cosine Similarity Bound",
+          "Adversarial Defense"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Securing vision-language models against adversarial noise",
+          "Robust multimodal content moderation",
+          "Safe deployment of MLLMs in security-critical environments"
+        ],
+        "limitations": [
+          "Focuses specifically on l2-bounded perturbations",
+          "Computational overhead associated with smoothing-based inference",
+          "Theoretical bounds may be conservative compared to empirical performance"
+        ]
+      }
+    }
+  ]
+}
