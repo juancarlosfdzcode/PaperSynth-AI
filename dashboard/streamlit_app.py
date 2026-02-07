@@ -226,7 +226,7 @@ def render_methodologies(report):
                            title="Most Used Research Methodologies",
                            color='Papers', color_continuous_scale='blues')
         
-        fig_methods.update_xaxis(tickangle=45)
+        fig_methods.update_xaxes(tickangle=45)
         st.plotly_chart(fig_methods, use_container_width=True)
 
 def render_insights(report):
