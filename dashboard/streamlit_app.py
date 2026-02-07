@@ -91,7 +91,7 @@ def render_header():
     st.markdown("---")
 
 def render_sidebar():
-    """Render sidebar with controls"""
+    """Render sidebar - VERSIÓN SIMPLIFICADA"""
     st.sidebar.title("🛠️ Controls")
     
     # Report selection
@@ -112,34 +112,20 @@ def render_sidebar():
         st.sidebar.warning("No reports found. Run the main pipeline first.")
         selected_report = None
     
-    # Run new analysis
+    # REMOVER los campos query y max_papers
     st.sidebar.markdown("### 🚀 Generate New Report")
-    
-    col1, col2 = st.sidebar.columns(2)
-    
-    query = st.sidebar.text_input("Research Query", value="large language models")
-    max_papers = st.sidebar.slider("Max Papers", 5, 50, 15)
+    st.sidebar.markdown("*Uses default settings: 'large language models', 15 papers*")
     
     if st.sidebar.button("🔄 Generate New Report"):
         with st.spinner("Running PaperSynth pipeline..."):
-            # Run main pipeline
-            import subprocess
-            import sys
+            result = subprocess.run([sys.executable, "main.py"], 
+                                  capture_output=True, text=True, timeout=300)
             
-            try:
-                result = subprocess.run([sys.executable, "main.py"], 
-                                      capture_output=True, text=True, timeout=300)
-                
-                if result.returncode == 0:
-                    st.sidebar.success("✅ New report generated!")
-                    st.rerun()
-                else:
-                    st.sidebar.error(f"❌ Error: {result.stderr}")
-                    
-            except subprocess.TimeoutExpired:
-                st.sidebar.error("❌ Pipeline timed out")
-            except Exception as e:
-                st.sidebar.error(f"❌ Error: {e}")
+            if result.returncode == 0:
+                st.sidebar.success("✅ New report generated!")
+                st.rerun()
+            else:
+                st.sidebar.error(f"❌ Error: {result.stderr}")
     
     return selected_report
 
@@ -209,25 +195,114 @@ def render_trends_charts(report):
             fig_keywords.update_layout(yaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig_keywords, use_container_width=True)
 
-def render_methodologies(report):
-    """Render methodology analysis"""
+def render_innovation_analysis(report):
+    """Render innovation and novelty analysis - NUEVO GRÁFICO"""
     if not report:
         return
         
-    methodologies = report['trends'].get('methodologies', {})
+    st.subheader("💡 Análisis de Innovación")
     
-    if methodologies:
-        st.subheader("🛠️ Popular Methodologies")
+    # Extraer puntuaciones de novedad
+    papers = report.get('sample_papers', [])
+    novelty_scores = []
+    categories = []
+    titles = []
+    
+    for paper in papers:
+        analysis = paper.get('analysis', {})
+        score = analysis.get('novelty_score')
+        category = analysis.get('ai_subcategory', 'Unknown')
+        title = paper.get('title', 'Sin título')
         
-        # Create methodology chart
-        df_methods = pd.DataFrame(list(methodologies.items())[:8], columns=['Methodology', 'Papers'])
+        if isinstance(score, (int, float)) and 1 <= score <= 10:
+            novelty_scores.append(score)
+            categories.append(category)
+            titles.append(title[:40] + '...' if len(title) > 40 else title)
+    
+    if novelty_scores:
+        col1, col2 = st.columns(2)
         
-        fig_methods = px.bar(df_methods, x='Methodology', y='Papers',
-                           title="Most Used Research Methodologies",
-                           color='Papers', color_continuous_scale='blues')
+        with col1:
+            # Histograma de puntuaciones de novedad
+            fig_hist = px.histogram(
+                x=novelty_scores,
+                nbins=10,
+                title="Distribución de Puntuaciones de Novedad",
+                labels={'x': 'Puntuación de Novedad (1-10)', 'y': 'Número de Papers'},
+                color_discrete_sequence=['#1f77b4']
+            )
+            
+            fig_hist.update_layout(
+                height=350,
+                showlegend=False,
+                xaxis=dict(range=[0.5, 10.5], tickvals=list(range(1, 11))),
+                margin=dict(l=20, r=20, t=50, b=20)
+            )
+            
+            # Agregar línea promedio
+            avg_score = sum(novelty_scores) / len(novelty_scores)
+            fig_hist.add_vline(
+                x=avg_score, 
+                line_dash="dash", 
+                line_color="red",
+                annotation_text=f"Promedio: {avg_score:.1f}"
+            )
+            
+            st.plotly_chart(fig_hist, use_container_width=True)
         
-        fig_methods.update_xaxes(tickangle=45)
-        st.plotly_chart(fig_methods, use_container_width=True)
+        with col2:
+            # Scatter plot: Novedad por Categoría
+            if len(set(categories)) > 1:  # Solo si hay múltiples categorías
+                df_scatter = pd.DataFrame({
+                    'Categoría': categories,
+                    'Novedad': novelty_scores,
+                    'Título': titles
+                })
+                
+                fig_scatter = px.scatter(
+                    df_scatter,
+                    x='Categoría',
+                    y='Novedad',
+                    color='Categoría',
+                    size=[1]*len(novelty_scores),
+                    hover_data={'Título': True},
+                    title="Novedad por Categoría de IA"
+                )
+                
+                fig_scatter.update_layout(
+                    height=350,
+                    yaxis=dict(range=[0, 11]),
+                    showlegend=False,
+                    margin=dict(l=20, r=20, t=50, b=20)
+                )
+                
+                st.plotly_chart(fig_scatter, use_container_width=True)
+            else:
+                # Si solo hay una categoría, mostrar box plot
+                fig_box = px.box(
+                    y=novelty_scores,
+                    title="Distribución de Novedad",
+                    labels={'y': 'Puntuación de Novedad'}
+                )
+                
+                fig_box.update_layout(height=350, showlegend=False)
+                st.plotly_chart(fig_box, use_container_width=True)
+        
+        # Estadísticas resumidas
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric("🎯 Promedio", f"{avg_score:.1f}/10")
+        with col2:
+            st.metric("📈 Máximo", f"{max(novelty_scores)}/10")
+        with col3:
+            st.metric("📉 Mínimo", f"{min(novelty_scores)}/10")
+        with col4:
+            high_innovation = sum(1 for score in novelty_scores if score >= 8)
+            st.metric("🚀 Alta Innovación", f"{high_innovation} papers")
+    
+    else:
+        st.info("ℹ️ No se encontraron puntuaciones de novedad en los papers analizados.")
 
 def render_insights(report):
     """Render key insights"""
@@ -266,42 +341,99 @@ def render_insights(report):
         """, unsafe_allow_html=True)
 
 def render_featured_papers(report):
-    """Render featured papers table"""
+    """Render featured papers table - VERSIÓN MEJORADA"""
     if not report:
         return
         
-    st.subheader("📚 Featured Papers")
+    st.subheader("📚 Papers Destacados")
     
     papers = report.get('sample_papers', [])
     
     if papers:
-        # Create papers dataframe
+        # Create papers dataframe con URLs
         papers_data = []
         for paper in papers:
             analysis = paper.get('analysis', {})
+            
+            # Construir lista de autores limpia
+            authors = paper.get('authors', [])
+            if authors:
+                if len(authors) > 3:
+                    authors_text = f"{authors[0]}, {authors[1]}, {authors[2]} et al. ({len(authors)} autores)"
+                else:
+                    authors_text = ", ".join(authors)
+            else:
+                authors_text = "No especificado"
+            
+            # ArXiv URL
+            arxiv_id = paper.get('arxiv_id', '')
+            arxiv_url = f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else ""
+            
             papers_data.append({
-                'Title': paper['title'][:80] + '...' if len(paper['title']) > 80 else paper['title'],
-                'ArXiv ID': paper['arxiv_id'],
-                'Authors': ', '.join(paper.get('authors', [])[:2]) + ('...' if len(paper.get('authors', [])) > 2 else ''),
-                'Category': analysis.get('ai_subcategory', 'Unknown'),
-                'Methodology': analysis.get('methodology', 'Not specified'),
-                'Novelty': analysis.get('novelty_score', 'N/A')
+                'Título': paper['title'][:80] + '...' if len(paper['title']) > 80 else paper['title'],
+                'Autores': authors_text,
+                'ArXiv ID': arxiv_id,
+                'ArXiv URL': arxiv_url,
+                'Categoría': analysis.get('ai_subcategory', 'No clasificado'),
+                'Metodología': analysis.get('methodology', 'No especificado')[:30] + ('...' if len(analysis.get('methodology', '')) > 30 else ''),
+                'Novedad': analysis.get('novelty_score', 'N/A')
             })
         
         df_papers = pd.DataFrame(papers_data)
         
+        # Configurar columnas con URLs clickeables
         st.dataframe(
             df_papers,
             use_container_width=True,
             hide_index=True,
             column_config={
-                "ArXiv ID": st.column_config.LinkColumn(
+                "Título": st.column_config.TextColumn(
+                    "Título",
+                    help="Título completo del paper",
+                    width="large"
+                ),
+                "Autores": st.column_config.TextColumn(
+                    "Autores",
+                    help="Lista de autores del paper",
+                    width="medium"
+                ),
+                "ArXiv ID": st.column_config.TextColumn(
                     "ArXiv ID",
-                    help="Click to view paper on arXiv",
-                    display_text="https://arxiv.org/abs/(.*)"
+                    help="Identificador único en arXiv"
+                ),
+                "ArXiv URL": st.column_config.LinkColumn(
+                    "🔗 Ver Paper",
+                    help="Abrir paper en arXiv",
+                    display_text="Ver en arXiv"
+                ),
+                "Categoría": st.column_config.TextColumn(
+                    "Categoría IA",
+                    help="Categoría de IA del paper"
+                ),
+                "Metodología": st.column_config.TextColumn(
+                    "Metodología",
+                    help="Metodología principal utilizada"
+                ),
+                "Novedad": st.column_config.NumberColumn(
+                    "Novedad",
+                    help="Puntuación de novedad (1-10)",
+                    format="%.1f"
                 )
             }
         )
+        
+        # Agregar links directos debajo de la tabla
+        st.markdown("### 🔗 Enlaces Directos")
+        
+        cols = st.columns(min(len(papers), 3))
+        for i, paper in enumerate(papers[:3]):
+            with cols[i]:
+                arxiv_id = paper.get('arxiv_id', '')
+                if arxiv_id:
+                    st.markdown(f"""
+                    **{paper['title'][:40]}...**  
+                    [`🔗 Ver en arXiv`](https://arxiv.org/abs/{arxiv_id})
+                    """)
 
 def render_raw_data(report):
     """Render raw data section"""
@@ -340,7 +472,7 @@ def main():
         render_trends_charts(selected_report)
         st.markdown("---")
         
-        render_methodologies(selected_report)
+        render_innovation_analysis(selected_report)
         st.markdown("---")
         
         render_insights(selected_report)

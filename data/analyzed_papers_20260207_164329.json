@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "total_papers": 15,
+  "analyzed_count": 3,
+  "timestamp": "20260207_164329",
+  "analyses": [
+    {
+      "arxiv_id": "2602.06043v1",
+      "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
+      "analysis": {
+        "ai_subcategory": "ML/CV/NLP",
+        "methodology": "Dynamic incremental update of a single shared low-rank subspace for parameter-efficient continual finetuning.",
+        "key_contribution": "Proposes a framework called Share that integrates knowledge from multiple tasks and modalities into a single evolving LoRA subspace, eliminating the need for task-specific adapters or data replay.",
+        "technical_keywords": [
+          "Continual Learning",
+          "LoRA",
+          "Subspace Adaptation",
+          "Catastrophic Forgetting",
+          "Forward Knowledge Transfer"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Lifelong learning in large-scale AI systems",
+          "Edge device model adaptation with limited memory",
+          "Multi-modal task finetuning",
+          "Asynchronous model deployment"
+        ],
+        "limitations": [
+          "Potential performance saturation as the subspace dimensionality fills up",
+          "Dependency on the quality of initial foundational subspace construction"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.06039v1",
+      "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching",
+      "analysis": {
+        "ai_subcategory": "NLP/Multi-Agent Systems",
+        "methodology": "Dynamic topology routing via semantic matching of agent-generated query and key descriptors per reasoning round.",
+        "key_contribution": "Introduces a manager-guided framework that dynamically reconstructs sparse communication graphs each round to match stage-dependent needs in multi-agent reasoning.",
+        "technical_keywords": [
+          "Multi-agent systems",
+          "Dynamic communication topology",
+          "Semantic matching",
+          "Sparse directed graphs",
+          "LLM reasoning"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Collaborative code generation",
+          "Complex mathematical problem solving",
+          "Iterative multi-step task planning"
+        ],
+        "limitations": [
+          "Increased latency from per-round graph reconstruction",
+          "Dependence on the manager agent's ability to define clear round goals",
+          "Overhead of generating additional query/key descriptors"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.06038v1",
+      "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
+      "analysis": {
+        "ai_subcategory": "Robotics / Multi-Agent Systems",
+        "methodology": "Decentralized LLM-based communication framework utilizing conformal prediction for message calibration.",
+        "key_contribution": "Formalizes the Multi-agent Multi-task Embodied Question Answering (MM-EQA) problem and introduces CommCP, a framework that leverages conformal prediction to enhance communication reliability and coordination among heterogeneous robots.",
+        "technical_keywords": [
+          "MM-EQA",
+          "Conformal Prediction",
+          "Large Language Models",
+          "Multi-Agent Coordination",
+          "Decentralized Communication"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Collaborative household service robots",
+          "Multi-robot search and rescue operations",
+          "Heterogeneous robot coordination in warehouse environments"
+        ],
+        "limitations": [
+          "High computational requirements for running LLMs on each agent",
+          "Potential sensitivity to the accuracy of the underlying world model used by the LLM"
+        ]
+      },
+      "processed_with_url": false
+    }
+  ]
+}
