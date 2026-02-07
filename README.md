@@ -1,19 +1,23 @@
 # 🤖 PaperSynth AI
 
+
 > **Sistema Multi-Agente de Síntesis de Papers de Investigación**  
 > Descubre, analiza y sintetiza automáticamente papers de IA usando CrewAI y Google Gemini.
+
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![CrewAI](https://img.shields.io/badge/CrewAI-Multi--Agent-green.svg)](https://crewai.com/)
 [![Gemini](https://img.shields.io/badge/Gemini-AI%20Analysis-orange.svg)](https://ai.google.dev/)
 
-## 🎯 **Qué hace**
 
-- 📄 **Descubre** papers recientes de arXiv
-- 🔍 **Analiza** contenido con Gemini AI (gratuito)
-- 📊 **Detecta** tendencias y patrones
-- 📝 **Genera** reportes ejecutivos
-- 🎨 **Visualiza** insights en dashboard interactivo
+## 🎯 **Características**
+
+- 📄 **Descubre** papers recientes de arXiv.
+- 🔍 **Analiza** contenido con Gemini AI (gratuito).
+- 📊 **Detecta** tendencias y patrones.
+- 📝 **Genera** reportes.
+- 🎨 **Visualiza** insights en un dashboard interactivo.
+
 
 ## ⚡ **Inicio Rápido**
 ```bash
