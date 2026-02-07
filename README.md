@@ -1,8 +1,8 @@
-# 🤖 PaperSynth AI
+# 🤖 PaperSynth AI.
 
 
-> **Sistema Multi-Agente de Síntesis de Papers de Investigación**  
-> Descubre, analiza y sintetiza automáticamente papers de IA usando CrewAI y Google Gemini.
+> **Sistema Multi-Agente de Síntesis para Papers de Investigación.**  
+> El objetivo de este proyecto es construir un pipeline robusto y list para producción que permita descubrir, analizar y sintetizar automáticamente papers de IA usando CrewAI y Google Gemini.
 
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -10,7 +10,7 @@
 [![Gemini](https://img.shields.io/badge/Gemini-AI%20Analysis-orange.svg)](https://ai.google.dev/)
 
 
-## 🎯 **Características**
+## 🎯 **Características.**
 
 - 📄 **Descubre** papers recientes de arXiv.
 - 🔍 **Analiza** contenido con Gemini AI (gratuito).
@@ -19,7 +19,8 @@
 - 🎨 **Visualiza** insights en un dashboard interactivo.
 
 
-## ⚡ **Inicio Rápido**
+## ⚡ **Inicio Rápido.**
+
 ```bash
 # 1. Clonar repositorio
 git clone https://github.com/tuusuario/papersynth-ai.git
@@ -38,16 +39,17 @@ python main.py
 python run_dashboard.py
 ```
 
-## 🏗️ **Arquitectura**
+## 🏗️ **Arquitectura.**
 ```
-🤖 4 Agentes Especializados:
-├── Paper Fetcher     → Obtiene papers de arXiv
-├── Content Analyzer  → Análisis con Gemini AI  
-├── Trend Detector    → Identifica patrones
-└── Synthesis Agent   → Genera reportes finales
+🤖 4 Agentes desarrollados:
+
+├── Paper Fetcher     → Obtiene papers de arXiv.
+├── Content Analyzer  → Análisis con Gemini AI.
+├── Trend Detector    → Identifica patrones.
+└── Synthesis Agent   → Genera reportes finales.
 ```
 
-## 📁 **Estructura**
+## 📁 **Estructura del proyecto.**
 ```
 papersynth-ai/
 ├── main.py              # Pipeline principal
@@ -59,14 +61,14 @@ papersynth-ai/
 └── data/               # Cache de datos
 ```
 
-## 📊 **Salidas**
+## 📊 **Salidas.**
 
-- **JSON**: Datos estructurados para APIs
-- **Markdown**: Reportes ejecutivos legibles
-- **Dashboard**: Visualizaciones interactivas
-- **Trends**: Gráficos de palabras clave, metodologías, categorías
+- **JSON**: Datos estructurados para APIs.
+- **Markdown**: Reportes listos para consulta.
+- **Dashboard**: Visualizaciones interactivas.
+- **Trends**: Gráficos de palabras clave, metodologías, categorías.
 
-## ⚙️ **Configuración**
+## ⚙️ **Configuración.**
 
 **Obligatorio:**
 ```bash
@@ -79,46 +81,43 @@ LOG_LEVEL=INFO
 MAX_PAPERS=20
 ```
 
-## 🧪 **Tests**
+## 🧪 **Tests.**
 ```bash
 python -m pytest tests/
 ```
 
-## 🚀 **Deploy**
+## 🚀 **Deploy.**
 
 - **Local**: `python main.py && python run_dashboard.py`
-- **Streamlit Cloud**: Deploy directo desde GitHub
-- **Docker**: `docker run -e GEMINI_API_KEY=key papersynth-ai`
 
-## 🛠️ **Stack Técnico**
+## 🛠️ **Stack Técnico.**
 
-- **Multi-Agent**: CrewAI
-- **LLM**: Google Gemini Flash (gratuito)
-- **Data**: arXiv API, pandas
-- **Viz**: Streamlit, Plotly
-- **Config**: YAML, Pydantic
+- **Multi-Agent**: CrewAI.
+- **LLM**: Google Gemini Flash (gratuito).
+- **Data**: arXiv API, pandas.
+- **Viz**: Streamlit, Plotly.
+- **Config**: YAML, Pydantic.
 
-## 💡 **Casos de Uso**
+## 💡 **Casos de Uso.**
 
-- **Investigadores**: Literatura review automatizada
-- **Empresas**: Inteligencia competitiva en IA
-- **Estudiantes**: Identificación de temas y trends
-- **Inversores**: Due diligence técnico
+- **Investigadores**: Literatura review automatizada.
+- **Empresas**: Inteligencia competitiva en IA.
+- **Estudiantes**: Identificación de temas y trends.
+- **Inversores**: Due diligence técnico.
 
-## 🤝 **Contribuir**
+## 🤝 Contribuir.
 
-1. Fork → 2. Feature branch → 3. Commit → 4. Push → 5. PR
+### Fork el proyecto
 
-## 📄 **Licencia**
+* Crea una rama (git checkout -b feature/AmazingFeature).
+* Commit cambios (git commit -m 'Add AmazingFeature').
+* Push a la rama (git push origin feature/AmazingFeature).
+* Abre un Pull Request.
 
-MIT License
+## 👤 Autor
 
-## 📧 **Contacto**
+* GitHub: https://github.com/juancarlosfdzcode
+* LinkedIn: https://www.linkedin.com/in/juan-carlos-fdz/
+* Medium: https://medium.com/@juancarlosfdzgarcode
 
-**Juan Carlos** - AI Engineer  
-📧 [tu.email@ejemplo.com](mailto:tu.email@ejemplo.com)  
-🔗 [LinkedIn](https://linkedin.com/in/tu-perfil) | [GitHub](https://github.com/tuusuario)
-
----
-
-⭐ **Dale estrella si te resultó útil**
+⭐ Si este proyecto te resultó útil, considera darle una estrella en GitHub.
