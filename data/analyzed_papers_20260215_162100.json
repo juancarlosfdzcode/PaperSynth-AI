@@ -1,0 +1,368 @@
+{
+  "status": "success",
+  "total_papers": 15,
+  "analyzed_count": 13,
+  "timestamp": "20260215_162100",
+  "analyses": [
+    {
+      "arxiv_id": "2602.12281v1",
+      "title": "Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment",
+      "analysis": {
+        "ai_subcategory": "Robotics/Machine Learning",
+        "methodology": "Test-time scaling through joint instruction rephrasing and action sampling coupled with a contrastive verifier (CoVer) and a hierarchical inference pipeline.",
+        "key_contribution": "Demonstrates that scaling test-time compute via verification and instruction augmentation is more effective for VLA alignment than traditional policy pre-training scaling.",
+        "technical_keywords": [
+          "Vision-Language-Action (VLA)",
+          "Test-time scaling laws",
+          "Contrastive verification",
+          "Instruction rephrasing",
+          "Embodied AI"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "General-purpose robotic manipulation",
+          "Autonomous instruction following in dynamic environments",
+          "Improving zero-shot performance of embodied agents"
+        ],
+        "limitations": [
+          "Increased computational overhead during inference",
+          "Potential latency issues for real-time robotic response",
+          "Dependence on VLM quality for instruction rephrasing"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12279v1",
+      "title": "UniT: Unified Multimodal Chain-of-Thought Test-time Scaling",
+      "analysis": {
+        "ai_subcategory": "Multimodal / Computer Vision",
+        "methodology": "Unified multimodal chain-of-thought test-time scaling using agentic data synthesis and iterative reasoning trajectories.",
+        "key_contribution": "Introduces a framework that enables unified multimodal models to improve performance through iterative reasoning, verification, and refinement at test time.",
+        "technical_keywords": [
+          "test-time scaling",
+          "multimodal chain-of-thought",
+          "unified models",
+          "iterative refinement",
+          "agentic data synthesis"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Complex spatial image generation",
+          "Iterative visual reasoning and understanding",
+          "Multimodal instruction following",
+          "Visual content editing and verification"
+        ],
+        "limitations": [
+          "Increased inference latency due to sequential processing",
+          "Higher computational cost compared to single-pass models",
+          "Dependency on high-quality synthetic trajectories for training"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12278v1",
+      "title": "AttentionRetriever: Attention Layers are Secretly Long Document Retrievers",
+      "analysis": {
+        "ai_subcategory": "NLP",
+        "methodology": "Leveraging attention mechanisms and entity-based retrieval to construct context-aware embeddings and define retrieval scope.",
+        "key_contribution": "Introduces AttentionRetriever, a novel model that uses internal attention layers to address context-awareness and causal dependence challenges in long document retrieval.",
+        "technical_keywords": [
+          "Retrieval-Augmented Generation (RAG)",
+          "Long Document Retrieval",
+          "Attention Mechanism",
+          "Entity-based Retrieval",
+          "Context-aware Embeddings"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Long-form document search engines",
+          "Legal and medical document processing",
+          "Enterprise-scale RAG systems"
+        ],
+        "limitations": [
+          "Dependency on entity extraction accuracy",
+          "Potential overhead in processing extremely long context windows compared to simple sparse retrieval"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12275v1",
+      "title": "On-Policy Context Distillation for Language Models",
+      "analysis": {
+        "ai_subcategory": "NLP",
+        "methodology": "On-policy context distillation using reverse Kullback-Leibler divergence on student-generated trajectories guided by a context-conditioned teacher.",
+        "key_contribution": "The paper introduces On-Policy Context Distillation (OPCD), a framework for language models to internalize in-context knowledge and system prompts into their parameters through self-generated data.",
+        "technical_keywords": [
+          "Context Distillation",
+          "On-Policy Learning",
+          "Reverse Kullback-Leibler Divergence",
+          "Experiential Knowledge",
+          "System Prompts"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Compressing long system prompts into model weights to save context window and latency",
+          "Distilling reasoning capabilities from large-scale teacher models to smaller student models",
+          "Internalizing historical solution traces for mathematical reasoning and text-based games"
+        ],
+        "limitations": [
+          "Computational overhead of generating on-policy trajectories during training",
+          "Potential performance bottleneck based on the quality of the teacher's context-conditioned guidance"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12274v1",
+      "title": "Function-Space Decoupled Diffusion for Forward and Inverse Modeling in Carbon Capture and Storage",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Decoupled function-space diffusion models integrated with differentiable Local Neural Operator (LNO) surrogates for gradient-based guidance.",
+        "key_contribution": "A generative framework (Fun-DDPS) that decouples geological priors from physics-based guidance to enable accurate forward and inverse subsurface modeling under extreme data sparsity.",
+        "technical_keywords": [
+          "Diffusion Models",
+          "Neural Operators",
+          "Inverse Problems",
+          "Carbon Capture and Storage",
+          "Function-Space Modeling"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Subsurface flow characterization for carbon sequestration",
+          "Geological parameter estimation from sparse sensor observations",
+          "Large-scale data assimilation in fluid dynamics"
+        ],
+        "limitations": [
+          "Computational overhead of iterative diffusion sampling compared to deterministic surrogates",
+          "Dependence on the availability of representative synthetic training data for the neural operator"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12273v1",
+      "title": "Learning to Control: The iUzawa-Net for Nonsmooth Optimal Control of Linear PDEs",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Algorithm unrolling of an inexact Uzawa method integrated with learnable neural network-based preconditioners and solvers.",
+        "key_contribution": "Introduces iUzawa-Net, the first neural network framework to achieve real-time solutions and proven epsilon-optimality for nonsmooth optimal control problems constrained by linear PDEs.",
+        "technical_keywords": [
+          "iUzawa-Net",
+          "Nonsmooth Optimal Control",
+          "PDE-constrained optimization",
+          "Algorithm unrolling",
+          "Saddle point problems"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Real-time control of physical systems governed by PDEs",
+          "Thermal process optimization",
+          "Dynamic structural engineering control"
+        ],
+        "limitations": [
+          "Currently restricted to linear partial differential equations",
+          "Success is contingent on the availability of representative training data for specific PDE classes"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12271v1",
+      "title": "MonarchRT: Efficient Attention for Real-Time Video Generation",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Structured attention parameterization via Monarch matrix factorization and optimized Triton kernels.",
+        "key_contribution": "Introduces Monarch-RT, a hardware-efficient attention mechanism using Monarch matrices that enables real-time, high-fidelity autoregressive video generation at 16 FPS.",
+        "technical_keywords": [
+          "Monarch matrices",
+          "Video Diffusion Transformers",
+          "Sparse attention",
+          "Autoregressive video generation",
+          "Triton kernels"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Real-time video synthesis",
+          "Edge-device video generation",
+          "Interactive video editing"
+        ],
+        "limitations": [
+          "Requires model finetuning to maintain performance",
+          "Highly optimized for specific Nvidia GPU architectures"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12270v1",
+      "title": "Creative Ownership in the Age of AI",
+      "analysis": {
+        "ai_subcategory": "Generative AI / ML Theory",
+        "methodology": "Mathematical modeling using closure operators and counterfactual analysis of training corpora",
+        "key_contribution": "Proposes a counterfactual criterion for copyright infringement where an AI output is infringing if it requires a specific training work to be generated.",
+        "technical_keywords": [
+          "closure operators",
+          "counterfactual infringement",
+          "heavy-tailed distributions",
+          "training corpus",
+          "asymptotic analysis"
+        ],
+        "novelty_score": 9,
+        "practical_applications": [
+          "Legal framework for AI copyright litigation",
+          "Algorithmic auditing for training data influence",
+          "Policy design for generative AI regulation"
+        ],
+        "limitations": [
+          "Computational difficulty of verifying counterfactual generation for large-scale models",
+          "Theoretical abstraction of 'organic' creative processes"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12268v1",
+      "title": "CM2: Reinforcement Learning with Checklist Rewards for Multi-Turn and Multi-Step Agentic Tool Use",
+      "analysis": {
+        "ai_subcategory": "RL / NLP",
+        "methodology": "Reinforcement Learning using decomposed checklist rewards with sparse reward assignment and LLM-simulated tool environments.",
+        "key_contribution": "Introduces a scalable RL framework that optimizes multi-turn tool-using agents by replacing binary outcome rewards with structured, fine-grained checklist criteria grounded in evidence.",
+        "technical_keywords": [
+          "Reinforcement Learning",
+          "Checklist Rewards",
+          "Agentic Tool Use",
+          "LLM-simulated Environment",
+          "Multi-turn Interaction",
+          "Sparse Rewards"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Autonomous Virtual Assistants",
+          "Enterprise API Integration",
+          "Automated Customer Support",
+          "Multi-step Task Automation"
+        ],
+        "limitations": [
+          "Potential simulation-to-reality gap from using LLM-simulated environments",
+          "Dependence on the judging model's ability to accurately evaluate checklist criteria",
+          "Scalability of checklist generation for highly diverse tool sets"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12262v1",
+      "title": "T3D: Few-Step Diffusion Language Models via Trajectory Self-Distillation with Direct Discriminative Optimization",
+      "analysis": {
+        "ai_subcategory": "NLP",
+        "methodology": "Trajectory self-distillation using Direct Discriminative Optimization (DDO) with a reverse-KL objective.",
+        "key_contribution": "A framework that improves the efficiency of diffusion language models by distilling generative trajectories into a few-step student model through mode-seeking optimization.",
+        "technical_keywords": [
+          "Diffusion Large Language Models",
+          "Trajectory Self-Distillation",
+          "Direct Discriminative Optimization",
+          "Reverse-KL Divergence",
+          "Few-step Decoding"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Real-time text generation",
+          "Low-latency non-autoregressive machine translation",
+          "Efficient deployment of generative models on edge devices"
+        ],
+        "limitations": [
+          "Performance gap remains between few-step and full-step decoding",
+          "Potential reduction in output diversity due to mode-seeking distillation"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12259v1",
+      "title": "Think like a Scientist: Physics-guided LLM Agent for Equation Discovery",
+      "analysis": {
+        "ai_subcategory": "Machine Learning",
+        "methodology": "An agentic framework (KeplerAgent) that uses LLMs to coordinate physics-based tools for inferring symmetries and structural priors to guide symbolic regression engines like PySINDy and PySR.",
+        "key_contribution": "Proposes a multi-step scientific reasoning framework for LLMs that discovers symbolic equations by first extracting physical properties to constrain the search space of symbolic regression engines.",
+        "technical_keywords": [
+          "LLM Agent",
+          "Symbolic Regression",
+          "Physics-guided AI",
+          "Equation Discovery",
+          "Symmetry Inference"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Automated scientific discovery",
+          "Data-driven physical modeling",
+          "System identification in engineering",
+          "Interpretable machine learning for physics"
+        ],
+        "limitations": [
+          "Performance is bounded by the capabilities of the underlying symbolic regression engines",
+          "Sensitivity to the accuracy of initial symmetry/structure inference",
+          "Potential computational overhead from multi-step agentic reasoning"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12257v1",
+      "title": "On the implicit regularization of Langevin dynamics with projected noise",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Analysis of stochastic differential equations and differential geometry using coupling methods on group actions.",
+        "key_contribution": "Identifies that Langevin dynamics with noise projected orthogonal to a group action is equivalent to isotropic Langevin dynamics with an additional drift term determined by the mean curvature of group orbits.",
+        "technical_keywords": [
+          "Langevin dynamics",
+          "implicit regularization",
+          "isometric group action",
+          "mean curvature",
+          "over-parametrization"
+        ],
+        "novelty_score": 8,
+        "practical_applications": [
+          "Understanding implicit bias in stochastic gradient descent",
+          "Training over-parametrized models with symmetries",
+          "Design of symmetry-preserving optimization algorithms"
+        ],
+        "limitations": [
+          "Assumes the group action is isometric",
+          "The equivalence is established in the continuous-time limit rather than discrete-time SGD",
+          "Focuses primarily on the theoretical mathematical framework"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.12251v1",
+      "title": "A technical curriculum on language-oriented artificial intelligence in translation and specialised communication",
+      "analysis": {
+        "ai_subcategory": "NLP",
+        "methodology": "Curriculum design and pedagogical evaluation through a pilot MA-level course.",
+        "key_contribution": "Proposes a technical curriculum focused on vector embeddings, neural networks, tokenization, and transformers to foster AI literacy and computational thinking among translation professionals.",
+        "technical_keywords": [
+          "vector embeddings",
+          "neural networks",
+          "tokenization",
+          "transformer neural networks",
+          "computational thinking"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "AI literacy training for translation and communication students",
+          "Professional development programs for the language technology industry",
+          "Integration of algorithmic agency into language services curricula"
+        ],
+        "limitations": [
+          "Requires significant didactic scaffolding and lecturer support",
+          "Pilot study limited to a single MA course cohort"
+        ]
+      },
+      "processed_with_url": false
+    }
+  ]
+}

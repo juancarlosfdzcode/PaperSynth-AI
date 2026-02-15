@@ -1,5 +1,5 @@
 """
-PaperSynth AI - Dashboard Streamlit
+PaperSynth AI - Dashboard Streamlit.
 """
 
 import streamlit as st
@@ -10,8 +10,10 @@ import plotly.graph_objects as go
 from pathlib import Path
 from datetime import datetime, timedelta
 import os
+import subprocess
+import sys
+import time
 
-# Page config
 st.set_page_config(
     page_title="PaperSynth AI Dashboard",
     page_icon="🤖",
@@ -19,7 +21,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
 st.markdown("""
 <style>
     .main-header {
@@ -45,13 +46,15 @@ st.markdown("""
 
 @st.cache_data
 def load_latest_report():
-    """Load the most recent report"""
+    """
+    Load the most recent report.
+    """
+
     outputs_dir = Path("outputs")
     
     if not outputs_dir.exists():
         return None
     
-    # Find latest report
     json_files = list(outputs_dir.glob("papersynth_report_*.json"))
     
     if not json_files:
@@ -64,7 +67,10 @@ def load_latest_report():
 
 @st.cache_data
 def load_all_reports():
-    """Load all available reports"""
+    """
+    Load all available reports.
+    """
+
     outputs_dir = Path("outputs")
     
     if not outputs_dir.exists():
@@ -86,13 +92,19 @@ def load_all_reports():
     return sorted(reports, key=lambda x: x['file_date'], reverse=True)
 
 def render_header():
-    """Render main header"""
+    """
+    Render main header.
+    """
+
     st.markdown('<h1 class="main-header">🤖 PaperSynth AI Dashboard</h1>', unsafe_allow_html=True)
     st.markdown("---")
 
 def render_sidebar():
-    """Render sidebar - VERSIÓN SIMPLIFICADA"""
-    st.sidebar.title("🛠️ Controls")
+    """
+    Render sidebar.
+    """
+
+    st.sidebar.title("🗃 Encuentra tus reportes.")
     
     # Report selection
     reports = load_all_reports()
@@ -102,7 +114,7 @@ def render_sidebar():
                          for r in reports]
         
         selected_idx = st.sidebar.selectbox(
-            "Select Report",
+            "Selecciona un reporte.",
             range(len(report_options)),
             format_func=lambda x: report_options[x]
         )
@@ -113,16 +125,16 @@ def render_sidebar():
         selected_report = None
     
     # REMOVER los campos query y max_papers
-    st.sidebar.markdown("### 🚀 Generate New Report")
-    st.sidebar.markdown("*Uses default settings: 'large language models', 15 papers*")
+    st.sidebar.markdown("### 🚀 Genera un nuevo reporte")
+    st.sidebar.markdown("*User default settings: 'large language models', 15 papers*")
     
-    if st.sidebar.button("🔄 Generate New Report"):
-        with st.spinner("Running PaperSynth pipeline..."):
+    if st.sidebar.button("🔄 Generar nuevo reporte"):
+        with st.spinner("Ejecutando PaperSynth pipeline..."):
             result = subprocess.run([sys.executable, "main.py"], 
                                   capture_output=True, text=True, timeout=300)
             
             if result.returncode == 0:
-                st.sidebar.success("✅ New report generated!")
+                st.sidebar.success("✅ Nuevo reporte generado!")
                 st.rerun()
             else:
                 st.sidebar.error(f"❌ Error: {result.stderr}")
@@ -138,13 +150,13 @@ def render_metrics(report):
     
     with col1:
         st.metric(
-            label="📄 Papers Found",
+            label="📄 Papers encontrados",
             value=report['summary']['total_papers_found']
         )
     
     with col2:
         st.metric(
-            label="🔍 Papers Analyzed", 
+            label="🔍 Papers analizados", 
             value=report['summary']['papers_analyzed']
         )
     
@@ -157,7 +169,7 @@ def render_metrics(report):
     with col4:
         innovation_score = report['trends'].get('avg_novelty_score', 0)
         st.metric(
-            label="💡 Avg Innovation",
+            label="💡 Avg innovación",
             value=f"{innovation_score:.1f}/10"
         )
 
@@ -177,7 +189,7 @@ def render_trends_charts(report):
             df_cats = pd.DataFrame(list(categories.items()), columns=['Category', 'Count'])
             
             fig_cats = px.pie(df_cats, values='Count', names='Category', 
-                             title="AI Research Categories",
+                             title="Categorías Destacadas",
                              color_discrete_sequence=px.colors.qualitative.Set3)
             
             st.plotly_chart(fig_cats, use_container_width=True)
@@ -186,11 +198,11 @@ def render_trends_charts(report):
         # Keywords bar chart
         keywords = report['trends']['top_keywords']
         if keywords:
-            df_keywords = pd.DataFrame(list(keywords.items())[:10], columns=['Keyword', 'Frequency'])
+            df_keywords = pd.DataFrame(list(keywords.items())[:10], columns=['Palabra Clave', 'Frecuencia'])
             
-            fig_keywords = px.bar(df_keywords, x='Frequency', y='Keyword',
-                                orientation='h', title="Top Technical Keywords",
-                                color='Frequency', color_continuous_scale='viridis')
+            fig_keywords = px.bar(df_keywords, x='Frecuencia', y='Palabra Clave',
+                                orientation='h', title="Top Palabras Clave",
+                                color='Frecuencia', color_continuous_scale='viridis')
             
             fig_keywords.update_layout(yaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig_keywords, use_container_width=True)
@@ -227,7 +239,7 @@ def render_innovation_analysis(report):
             fig_hist = px.histogram(
                 x=novelty_scores,
                 nbins=10,
-                title="Distribución de Puntuaciones de Novedad",
+                title="Distribución de Puntuaciones",
                 labels={'x': 'Puntuación de Novedad (1-10)', 'y': 'Número de Papers'},
                 color_discrete_sequence=['#1f77b4']
             )
@@ -318,7 +330,7 @@ def render_insights(report):
     with col1:
         st.markdown(f"""
         <div class="insight-box">
-        <h4>🔥 Dominant Category</h4>
+        <h4>🔥 Categoría Principal</h4>
         <p><strong>{insights.get('dominant_category', 'Unknown')}</strong></p>
         </div>
         """, unsafe_allow_html=True)
@@ -326,7 +338,7 @@ def render_insights(report):
     with col2:
         st.markdown(f"""
         <div class="insight-box">
-        <h4>⚡ Innovation Level</h4>
+        <h4>⚡ Nivel de Innovación </h4>
         <p><strong>{insights.get('innovation_level', 'Unknown')}</strong></p>
         </div>
         """, unsafe_allow_html=True)
