@@ -107,9 +107,6 @@ python main.py
 ```bash
 # Ejecutar todos los tests
 PYTHONPATH=. pytest tests/ -v
-
-# Script de tests
-./test.sh
 ```
 
 **Coverage: 96.5% (28/29 tests passing)** Cubriendo todos los componentes críticos:
