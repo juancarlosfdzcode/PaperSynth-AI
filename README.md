@@ -110,9 +110,9 @@ PYTHONPATH=. pytest tests/ -v
 ```
 
 **Coverage: 96.5% (28/29 tests passing)** Cubriendo todos los componentes críticos:
-- ✅ ArXiv Tool: Integración con API de arXiv
-- ✅ Gemini Tool: Procesamiento LLM y análisis  
-- ✅ Agent Factory: Arquitectura multi-agente
+- ✅ ArXiv Tool: Integración con API de arXiv.
+- ✅ Gemini Tool: Procesamiento LLM y análisis.  
+- ✅ Agent Factory: Arquitectura multi-agente.
 
 ## 🛠️ **Stack Técnico.**
 
