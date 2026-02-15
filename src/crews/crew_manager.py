@@ -6,7 +6,8 @@ import yaml
 from pathlib import Path
 from typing import Dict, Any
 import logging
-
+import datetime
+import json
 from crewai import Crew
 from src.agents.agent_factory import AgentFactory
 from src.tasks.task_factory import TaskFactory
@@ -61,4 +62,18 @@ class CrewManager:
         crew = self.create_crew(crew_name, **context_vars)
         result = crew.kickoff()
         logging.info(f"✅ Crew {crew_name} completed")
+
+        Path("outputs").mkdir(exist_ok=True)
+
+        output_data = {
+            "crew_name": crew_name,
+            "timestamp": datetime.now().isoformat(),
+            "result": str(result)
+        }
+
+        with open("outputs/crew_results.json", 'w') as f:
+            json.dump(output_data, f, indent=2)
+        
+        logging.info("💾 Results saved to outputs/crew_results.json")
+        
         return result
