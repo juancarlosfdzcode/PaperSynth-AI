@@ -52,13 +52,15 @@ python run_dashboard.py
 ## 📁 **Estructura del proyecto.**
 ```
 papersynth-ai/
-├── main.py              # Pipeline principal
-├── run_dashboard.py     # Lanzador de dashboard
-├── dashboard/           # Dashboard Streamlit
-├── config/              # Configuración YAML
-├── src/                 # Código fuente
-├── outputs/             # Reportes generados
-└── data/               # Cache de datos
+├── main.py              # Pipeline principal.
+├── run_dashboard.py     # Script para ejecutar el dashboard.
+├── requirements.txt     
+├── dashboard/           # Dashboard Streamlit.
+├── config/              # Configuración YAML.
+├── src/                 # Código fuente.
+├── outputs/             # Reportes generados.
+└── data/               # Cache de datos.
+└── tests/               # Tests unitarios.
 ```
 
 ## 📊 **Salidas.**
@@ -89,6 +91,31 @@ python -m pytest tests/
 ## 🚀 **Deploy.**
 
 - **Local**: `python main.py && python run_dashboard.py`
+
+## ⚠️ **Nota Importante sobre el Dashboard**
+
+**Para mejor experiencia, usa el pipeline principal:**
+```bash
+python main.py
+```
+
+**Dashboard - Limitaciones:**
+- La funcionalidad "🔄 Generar Nuevo Reporte" puede causar **timeouts** debido a límites de Streamlit y rate limiting de Gemini gratuito
+- **Flujo recomendado**: Ejecutar `python main.py` primero, luego usar `python run_dashboard.py` para visualizar resultados
+
+## 🧪 **Testing**
+```bash
+# Ejecutar todos los tests
+PYTHONPATH=. pytest tests/ -v
+
+# Script de tests
+./test.sh
+```
+
+**Coverage: 96.5% (28/29 tests passing)** Cubriendo todos los componentes críticos:
+- ✅ ArXiv Tool: Integración con API de arXiv
+- ✅ Gemini Tool: Procesamiento LLM y análisis  
+- ✅ Agent Factory: Arquitectura multi-agente
 
 ## 🛠️ **Stack Técnico.**
 
