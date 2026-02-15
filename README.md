@@ -59,7 +59,7 @@ papersynth-ai/
 ├── config/              # Configuración YAML.
 ├── src/                 # Código fuente.
 ├── outputs/             # Reportes generados.
-└── data/               # Cache de datos.
+├── data/                # Cache de datos.
 └── tests/               # Tests unitarios.
 ```
 
