@@ -8,6 +8,10 @@ import json
 from pathlib import Path
 from dotenv import load_dotenv
 from datetime import datetime
+import yaml
+
+with open("config/settings.yml", "r") as f:
+    settings = yaml.safe_load(f)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,8 +44,8 @@ def run_papersynth_pipeline():
         
         papers_result = arxiv_tool._run(
             query="large language models OR transformers OR attention mechanism",
-            max_results=15,  # Reasonable amount for demo
-            categories=["cs.AI", "cs.LG", "cs.CL"]
+            max_results=settings["research"]["max_papers_per_run"],
+            categories=settings["research"]["default_categories"]
         )
         
         papers_data = json.loads(papers_result)
@@ -74,7 +78,7 @@ def run_papersynth_pipeline():
         gemini_tool = GeminiTool()
         
         # Analyze in batches to avoid timeout
-        batch_size = 5
+        batch_size = settings["research"]["batch_size"]
         all_analyses = []
         
         for i in range(0, len(papers), batch_size):
