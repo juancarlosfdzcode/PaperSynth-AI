@@ -1,4 +1,4 @@
-# Project Configuration
+# Configuración del proyecto.
 
 project:
   name: "PaperSynth Research Agent"
@@ -43,7 +43,7 @@ research:
     - "deep learning"
     - "neural networks"
   
-  max_papers_per_run: 100
-  batch_size: 10
+  max_papers_per_run: 15
+  batch_size: 5
   date_range_days: 60
   processing_mode: "abstract_plus_url"
