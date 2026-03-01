@@ -117,7 +117,7 @@ class GeminiTool(BaseTool):
                 "methodology": "main methodology used",
                 "key_contribution": "primary contribution in one sentence",
                 "technical_keywords": ["keyword1", "keyword2", "keyword3"],
-                "novelty_score": 1-10,
+                "novelty_score": integer 1-10 (1-3=incremental, 4-6=moderate contribution combining known approaches, 7-8=clear advancement over state of the art, 9-10=ONLY for paradigm-shifting work like Transformers or GPT. Be conservative, most papers score 4-6),
                 "practical_applications": ["application1", "application2"],
                 "limitations": ["limitation1", "limitation2"]
             }
