@@ -1,0 +1,14 @@
+{
+  "execution_summary": {
+    "timestamp": "20260301_173240",
+    "status": "success",
+    "papers_processed": 15,
+    "papers_analyzed": 14
+  },
+  "generated_files": {
+    "raw_papers": "data/fetched_papers_20260301_173240.json",
+    "analysis_data": "data/analyzed_papers_20260301_173240.json",
+    "json_report": "outputs/papersynth_report_20260301_173240.json",
+    "markdown_report": "outputs/papersynth_report_20260301_173240.md"
+  }
+}

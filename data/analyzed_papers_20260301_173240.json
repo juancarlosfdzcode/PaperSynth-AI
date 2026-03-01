@@ -1,0 +1,395 @@
+{
+  "status": "success",
+  "total_papers": 15,
+  "analyzed_count": 14,
+  "timestamp": "20260301_173240",
+  "analyses": [
+    {
+      "arxiv_id": "2602.23363v1",
+      "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+      "analysis": {
+        "ai_subcategory": "CV/NLP/RL",
+        "methodology": "Group-Based Reinforcement Learning with composite reward signals incorporating LLM-based accuracy, medical embedding semantic similarity, and format/modality constraints.",
+        "key_contribution": "Development of an open-ended RL framework for medical multimodal models that shifts beyond multiple-choice formats toward clinically grounded, free-form reasoning via a multi-signal reward design.",
+        "technical_keywords": [
+          "Multimodal Large Language Models (MLLMs)",
+          "Group Based RL",
+          "Medical Reasoning",
+          "Composite Reward Signals",
+          "LLM-as-judge",
+          "Clinical LLMs"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Clinical decision support systems",
+          "Multimodal medical diagnosis assistance",
+          "Automated clinical report generation",
+          "Interactive medical education tools"
+        ],
+        "limitations": [
+          "Reliance on LLM-as-judge which may introduce evaluation biases",
+          "High computational resources required for RL fine-tuning",
+          "Potential sensitivity to the specific medical embedding model used for semantic rewards"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23361v1",
+      "title": "VGG-T$^3$: Offline Feed-Forward 3D Reconstruction at Scale",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Distilling varying-length Key-Value (KV) space representations of scene geometry into a fixed-size Multi-Layer Perceptron (MLP) via test-time training (TTT).",
+        "key_contribution": "Introduced a scalable 3D reconstruction model that achieves linear complexity relative to input views by replacing quadratic softmax attention with a fixed-size MLP representation via test-time training.",
+        "technical_keywords": [
+          "3D Reconstruction",
+          "Test-Time Training",
+          "Linear Complexity",
+          "Key-Value Distillation",
+          "Visual Localization"
+        ],
+        "novelty_score": 7,
+        "practical_applications": [
+          "Large-scale urban mapping",
+          "Rapid 3D scene digitizing",
+          "Autonomous vehicle localization",
+          "Augmented reality environment scanning"
+        ],
+        "limitations": [
+          "Requires a test-time training phase for each scene",
+          "Potential for representation capacity limits in the fixed-size MLP for extremely complex scenes"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23360v1",
+      "title": "Model Agreement via Anchoring",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Development of a theoretical 'anchoring' technique to bound the expected squared difference in predictions between independently trained models.",
+        "key_contribution": "Introduces a general analysis framework to prove that model disagreement can be driven to zero for common algorithms like gradient boosting and neural architecture search by scaling specific training parameters.",
+        "technical_keywords": [
+          "Model Disagreement",
+          "Anchoring",
+          "Gradient Boosting",
+          "Neural Architecture Search",
+          "Strongly Convex Loss"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Improving reproducibility in machine learning research",
+          "Benchmarking model stability in automated machine learning",
+          "Optimizing hyperparameters for ensemble methods"
+        ],
+        "limitations": [
+          "Generalization of results requires strongly convex loss functions",
+          "The analysis is primarily framed for regression tasks rather than discrete classification",
+          "Theoretical bounds may not fully capture the complexity of non-convex optimization in deep learning"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23359v1",
+      "title": "SeeThrough3D: Occlusion Aware 3D Control in Text-to-Image Generation",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Conditioning a flow-based text-to-image model using an Occlusion-aware 3D Scene Representation (OSCR) consisting of rendered translucent 3D boxes and masked self-attention for attribute binding.",
+        "key_contribution": "Introduces a framework for 3D layout-conditioned image generation that explicitly models inter-object occlusions and camera viewpoints through a translucent 3D box representation.",
+        "technical_keywords": [
+          "Occlusion reasoning",
+          "3D layout conditioning",
+          "Text-to-image",
+          "Flow-based models",
+          "Masked self-attention"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Controllable digital content creation",
+          "Virtual scene prototyping",
+          "Augmented reality visualization",
+          "Film storyboarding"
+        ],
+        "limitations": [
+          "Reliance on synthetic datasets for training occlusion logic",
+          "Object representation is limited to 3D bounding boxes which may oversimplify complex shapes"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23358v1",
+      "title": "A Dataset is Worth 1 MB",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Pseudo-Labels as Data (PLADA) with semantic pruning of reference datasets",
+        "key_contribution": "A communication-efficient framework that eliminates pixel transmission by sending only class labels for relevant images selected from a pre-distributed reference dataset.",
+        "technical_keywords": [
+          "Dataset Distillation",
+          "Communication Efficiency",
+          "Pseudo-Labels",
+          "Reference Dataset Pruning",
+          "Semantic Relevance"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Low-bandwidth distribution of training data to edge devices",
+          "Efficient dataset serving for diverse hardware clients",
+          "Task-specific model adaptation in resource-constrained environments"
+        ],
+        "limitations": [
+          "Requires clients to have large pre-installed reference datasets (e.g., ImageNet)",
+          "Performance is capped by the semantic coverage of the reference dataset",
+          "Ineffective for tasks with data distributions completely alien to the reference set"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23357v1",
+      "title": "Sensor Generalization for Adaptive Sensing in Event-based Object Detection via Joint Distribution Training",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Analysis of intrinsic sensor parameters and joint distribution training for sensor-agnostic robustness.",
+        "key_contribution": "Provides an in-depth analysis of how event camera intrinsic parameters affect object detection and proposes a training methodology to improve generalization across different sensors.",
+        "technical_keywords": [
+          "event cameras",
+          "object detection",
+          "sensor generalization",
+          "joint distribution training",
+          "asynchronous sensing"
+        ],
+        "novelty_score": 5,
+        "practical_applications": [
+          "Autonomous driving in variable lighting",
+          "High-speed robotic vision",
+          "Low-latency surveillance systems"
+        ],
+        "limitations": [
+          "Evaluation may be constrained by the diversity of available event-based datasets",
+          "Sensitivity to extreme parameter shifts not covered in the joint distribution"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23351v1",
+      "title": "Scale Can't Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning",
+      "analysis": {
+        "ai_subcategory": "Multimodal Learning (NLP/CV)",
+        "methodology": "Analysis of training corpora through pragmatics theories and evaluation of model performance across scales on reasoning-focused benchmarks.",
+        "key_contribution": "Identifies reporting bias in training data as the primary barrier to VLM reasoning and proves that scaling model size or data volume is insufficient to overcome this limitation.",
+        "technical_keywords": [
+          "Reporting Bias",
+          "Vision-Language Models",
+          "Pragmatics",
+          "Multimodal Reasoning",
+          "Scaling Laws"
+        ],
+        "novelty_score": 7,
+        "practical_applications": [
+          "Improving data curation strategies for foundation models",
+          "Enhancing spatial and temporal reasoning in multimodal assistants",
+          "Developing synthetic data generation techniques that focus on tacit information"
+        ],
+        "limitations": [
+          "Relies on a specific subset of reasoning skills for evaluation",
+          "Requires manual or specialized annotation efforts to mitigate the identified bias"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23349v1",
+      "title": "FlashOptim: Optimizers for Memory Efficient Training",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Quantization of optimizer states using companding functions and optimized master weight splitting.",
+        "key_contribution": "Introduces a suite of memory-efficient optimization techniques that reduce per-parameter training memory by over 50% without compromising model accuracy.",
+        "technical_keywords": [
+          "quantization",
+          "optimizer states",
+          "memory-efficient training",
+          "companding functions",
+          "master weight splitting"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Fine-tuning 7B+ parameter models on consumer GPUs",
+          "Reducing storage costs for frequent model checkpointing",
+          "Scaling training of large vision and language models"
+        ],
+        "limitations": [
+          "Potential computational overhead introduced by companding functions",
+          "Effectiveness may vary across specialized hardware architectures"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23339v1",
+      "title": "Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Retrieval-augmented test-time adaptation with learned per-query fusion of visual and textual features.",
+        "key_contribution": "Introduces a few-shot retrieval-augmented framework that bridges the gap between zero-shot and supervised segmentation by utilizing a support set of pixel-annotated images to refine vision-language model predictions.",
+        "technical_keywords": [
+          "Open-Vocabulary Segmentation",
+          "Vision-Language Models",
+          "Retrieval-Augmented Learning",
+          "Test-Time Adaptation",
+          "Few-Shot Segmentation"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Personalized image segmentation for user-defined categories",
+          "Domain-specific object detection and segmentation (e.g., medical or industrial)",
+          "Interactive image editing and annotation tools"
+        ],
+        "limitations": [
+          "Requires access to a relevant and pixel-annotated support set",
+          "Potential increase in inference latency due to test-time adaptation and retrieval"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23336v1",
+      "title": "Differentiable Zero-One Loss via Hypersimplex Projections",
+      "analysis": {
+        "ai_subcategory": "ML",
+        "methodology": "Smooth, order-preserving projection onto the n,k-dimensional hypersimplex within a constrained optimization framework.",
+        "key_contribution": "The introduction of the Soft-Binary-Argmax operator, a novel differentiable approximation to the zero-one loss that enables gradient-based optimization while improving large-batch generalization.",
+        "technical_keywords": [
+          "zero-one loss",
+          "hypersimplex projections",
+          "Soft-Binary-Argmax",
+          "differentiable optimization",
+          "large-batch training"
+        ],
+        "novelty_score": 7,
+        "practical_applications": [
+          "High-performance classification models",
+          "Large-scale batch training in distributed systems",
+          "End-to-end differentiable structured prediction"
+        ],
+        "limitations": [
+          "Computational complexity of the Jacobian calculation for the projection operator",
+          "Dependence on geometric consistency constraints which may vary by dataset"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23335v1",
+      "title": "Understanding Usage and Engagement in AI-Powered Scientific Research Tools: The Asta Interaction Dataset",
+      "analysis": {
+        "ai_subcategory": "NLP",
+        "methodology": "Large-scale empirical analysis of user interaction logs and development of a query intent taxonomy.",
+        "key_contribution": "The paper introduces the Asta Interaction Dataset, a large-scale resource of over 200,000 real-world user queries and interactions to characterize how researchers engage with LLM-powered scientific tools.",
+        "technical_keywords": [
+          "Retrieval-Augmented Generation",
+          "User Interaction Analysis",
+          "Query Intent Taxonomy",
+          "Scientific Search",
+          "Large Language Models"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Improving the design of AI-powered research assistants",
+          "Developing realistic evaluation benchmarks for scientific QA systems",
+          "Optimizing UI/UX for RAG-based discovery tools"
+        ],
+        "limitations": [
+          "Findings may be influenced by the specific UI/UX of the two tools studied",
+          "The dataset is limited to the scientific research domain",
+          "Anonymization might restrict fine-grained analysis of specific research topics"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23334v1",
+      "title": "Bitwise Systolic Array Architecture for Runtime-Reconfigurable Multi-precision Quantized Multiplication on Hardware Accelerators",
+      "analysis": {
+        "ai_subcategory": "CV",
+        "methodology": "Runtime-reconfigurable bitwise systolic array architecture",
+        "key_contribution": "A bitwise systolic array design that supports runtime-reconfigurable multi-precision and multi-channel multiplication for efficient mixed-precision Quantized Neural Network (QNN) inference.",
+        "technical_keywords": [
+          "Systolic Array",
+          "Mixed-precision Quantization",
+          "FPGA",
+          "Hardware Accelerator",
+          "QNN"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Edge computing devices",
+          "Real-time object tracking",
+          "Mobile image recognition"
+        ],
+        "limitations": [
+          "Hardware overhead for reconfiguration logic",
+          "Performance gains are dependent on specific mixed-precision model profiles"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23331v1",
+      "title": "Utilizing LLMs for Industrial Process Automation",
+      "analysis": {
+        "ai_subcategory": "NLP",
+        "methodology": "LLM-based code generation and systems integration for domain-specific languages",
+        "key_contribution": "Extending the utility of Large Language Models to specialized and proprietary industrial automation languages to accelerate manufacturing development cycles.",
+        "technical_keywords": [
+          "Large Language Models",
+          "Industrial Automation",
+          "Domain-Specific Languages",
+          "Robotics Programming",
+          "Software Engineering"
+        ],
+        "novelty_score": 5,
+        "practical_applications": [
+          "Generating movement routines for robotic arms",
+          "Accelerating software development for manufacturing systems",
+          "Automating proprietary industrial control logic"
+        ],
+        "limitations": [
+          "Limited availability of training data for proprietary languages",
+          "Lack of standardized benchmarks in industrial contexts"
+        ]
+      },
+      "processed_with_url": false
+    },
+    {
+      "arxiv_id": "2602.23330v1",
+      "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
+      "analysis": {
+        "ai_subcategory": "NLP / Multi-Agent Systems",
+        "methodology": "Multi-agent LLM framework utilizing fine-grained task decomposition and leakage-controlled backtesting.",
+        "key_contribution": "The paper demonstrates that decomposing complex investment analysis into specific, fine-grained tasks within a multi-agent LLM system significantly improves risk-adjusted returns and decision transparency compared to coarse-grained instructions.",
+        "technical_keywords": [
+          "Large Language Models",
+          "Multi-Agent Systems",
+          "Task Decomposition",
+          "Financial Trading",
+          "Portfolio Optimization"
+        ],
+        "novelty_score": 6,
+        "practical_applications": [
+          "Automated algorithmic trading systems",
+          "AI-driven investment research tools",
+          "Quantitative portfolio management"
+        ],
+        "limitations": [
+          "The evaluation is restricted to the Japanese stock market",
+          "High computational cost and latency inherent in multi-agent LLM workflows",
+          "Performance is highly dependent on the alignment between intermediate agent outputs and downstream decision logic"
+        ]
+      },
+      "processed_with_url": false
+    }
+  ]
+}

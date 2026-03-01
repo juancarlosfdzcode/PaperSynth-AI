@@ -6,7 +6,7 @@ tools:
     description: "Fetch recent AI papers from arXiv with abstracts and ar5iv URLs"
     class_path: "src.tools.arxiv_tool.ArxivTool"
     config:
-      default_max_results: 50
+      default_max_results: 15
       include_ar5iv_urls: true
       include_pdf_urls: false
       output_format: "json"

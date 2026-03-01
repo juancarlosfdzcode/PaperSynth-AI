@@ -1,0 +1,366 @@
+{
+  "status": "success",
+  "papers_count": 15,
+  "papers": [
+    {
+      "id": 1,
+      "arxiv_id": "2602.23363v1",
+      "fetched_date": "2026-03-01T17:32:43.597647",
+      "published": "2026-02-26T18:59:46+00:00",
+      "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+      "authors": [
+        "Sahal Shaji Mullappilly",
+        "Mohammed Irfan Kurpath",
+        "Omair Mohamed",
+        "Mohamed Zidan",
+        "Fahad Khan",
+        "Salman Khan",
+        "Rao Anwer",
+        "Hisham Cholakkal"
+      ],
+      "summary": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YESNO decision, a medical embedding-based semantic reward to capture paraphrases and terminology variants, and lightweight format and modality rewards that enforce interpretable reasoning and modality recognition. This multi-signal design provides stable, informative feedback for open-ended outputs where traditional verifiable or MCQ-only rewards fall short. To measure progress, we propose a unified evaluation framework for both text-only and imagetext tasks that uses a Reference-based LLM-as-judge in place of brittle string-overlap metrics, capturing semantic correctness, reasoning, and contextual alignment. Despite using only sim51K instruction examples, MediX-R1 achieves excellent results across standard medical LLM (text-only) and VLM (image  text) benchmarks, outperforming strong open-source baselines and delivering particularly large gains on open-ended clinical tasks. Our results demonstrate that open-ended RL with comprehensive reward signals and LLM-based evaluation is a practical path toward reliable medical reasoning in multimodal models. Our trained models, curated datasets and source code are available at https:medix.cvmbzuai.com",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23363v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23363v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23363v1"
+    },
+    {
+      "id": 2,
+      "arxiv_id": "2602.23361v1",
+      "fetched_date": "2026-03-01T17:32:43.597828",
+      "published": "2026-02-26T18:59:33+00:00",
+      "title": "VGG-T$^3$: Offline Feed-Forward 3D Reconstruction at Scale",
+      "authors": [
+        "Sven Elflein",
+        "Ruilong Li",
+        "Sérgio Agostinho",
+        "Zan Gojcic",
+        "Laura Leal-Taixé",
+        "Qunjie Zhou",
+        "Aljosa Osep"
+      ],
+      "summary": "We present a scalable 3D reconstruction model that addresses a critical limitation in offline feed-forward methods: their computational and memory requirements grow quadratically w.r.t. the number of input images. Our approach is built on the key insight that this bottleneck stems from the varying-length Key-Value (KV) space representation of scene geometry, which we distill into a fixed-size Multi-Layer Perceptron (MLP) via test-time training. VGG-T3 (Visual Geometry Grounded Test Time Training) scales linearly w.r.t. the number of input views, similar to online models, and reconstructs a 1k image collection in just 54 seconds, achieving a 11.6times speed-up over baselines that rely on softmax attention. Since our method retains global scene aggregation capability, our point map reconstruction error outperforming other linear-time methods by large margins. Finally, we demonstrate visual localization capabilities of our model by querying the scene representation with unseen images.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23361v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23361v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23361v1"
+    },
+    {
+      "id": 3,
+      "arxiv_id": "2602.23360v1",
+      "fetched_date": "2026-03-01T17:32:43.597896",
+      "published": "2026-02-26T18:59:32+00:00",
+      "title": "Model Agreement via Anchoring",
+      "authors": [
+        "Eric Eaton",
+        "Surbhi Goel",
+        "Marcel Hussing",
+        "Michael Kearns",
+        "Aaron Roth",
+        "Sikata Bela Sengupta",
+        "Jessica Sorrell"
+      ],
+      "summary": "Numerous lines of aim to control textitmodel disagreement -- the extent to which two machine learning models disagree in their predictions. We adopt a simple and standard notion of model disagreement in real-valued prediction problems, namely the expected squared difference in predictions between two models trained on independent samples, without any coordination of the training processes. We would like to be able to drive disagreement to zero with some natural parameter(s) of the training procedure using analyses that can be applied to existing training methodologies. We develop a simple general technique for proving bounds on independent model disagreement based on textitanchoring to the average of two models within the analysis. We then apply this technique to prove disagreement bounds for four commonly used machine learning algorithms: (1) stacked aggregation over an arbitrary model class (where disagreement is driven to 0 with the number of models k being stacked) (2) gradient boosting (where disagreement is driven to 0 with the number of iterations k) (3) neural network training with architecture search (where disagreement is driven to 0 with the size n of the architecture being optimized over) and (4) regression tree training over all regression trees of fixed depth (where disagreement is driven to 0 with the depth d of the tree architecture). For clarity, we work out our initial bounds in the setting of one-dimensional regression with squared error loss -- but then show that all of our results generalize to multi-dimensional regression with any strongly convex loss.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23360v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23360v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23360v1"
+    },
+    {
+      "id": 4,
+      "arxiv_id": "2602.23359v1",
+      "fetched_date": "2026-03-01T17:32:43.597981",
+      "published": "2026-02-26T18:59:05+00:00",
+      "title": "SeeThrough3D: Occlusion Aware 3D Control in Text-to-Image Generation",
+      "authors": [
+        "Vaibhav Agrawal",
+        "Rishubh Parihar",
+        "Pradhaan Bhat",
+        "Ravi Kiran Sarvadevabhatla",
+        "R. Venkatesh Babu"
+      ],
+      "summary": "We identify occlusion reasoning as a fundamental yet overlooked aspect for 3D layout-conditioned generation. It is essential for synthesizing partially occluded objects with depth-consistent geometry and scale. While existing methods can generate realistic scenes that follow input layouts, they often fail to model precise inter-object occlusions. We propose SeeThrough3D, a model for 3D layout conditioned generation that explicitly models occlusions. We introduce an occlusion-aware 3D scene representation (OSCR), where objects are depicted as translucent 3D boxes placed within a virtual environment and rendered from desired camera viewpoint. The transparency encodes hidden object regions, enabling the model to reason about occlusions, while the rendered viewpoint provides explicit camera control during generation. We condition a pretrained flow based text-to-image image generation model by introducing a set of visual tokens derived from our rendered 3D representation. Furthermore, we apply masked self-attention to accurately bind each object bounding box to its corresponding textual description, enabling accurate generation of multiple objects without object attribute mixing. To train the model, we construct a synthetic dataset with diverse multi-object scenes with strong inter-object occlusions. SeeThrough3D generalizes effectively to unseen object categories and enables precise 3D layout control with realistic occlusions and consistent camera control.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23359v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23359v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23359v1"
+    },
+    {
+      "id": 5,
+      "arxiv_id": "2602.23358v1",
+      "fetched_date": "2026-03-01T17:32:43.598054",
+      "published": "2026-02-26T18:59:03+00:00",
+      "title": "A Dataset is Worth 1 MB",
+      "authors": [
+        "Elad Kimchi Shoshani",
+        "Leeyam Gabay",
+        "Yedid Hoshen"
+      ],
+      "summary": "A dataset server must often distribute the same large payload to many clients, incurring massive communication costs. Since clients frequently operate on diverse hardware and software frameworks, transmitting a pre-trained model is often infeasible; instead, agents require raw data to train their own task-specific models locally. While dataset distillation attempts to compress training signals, current methods struggle to scale to high-resolution data and rarely achieve sufficiently small files. In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission. We assume agents are preloaded with a large, generic, unlabeled reference dataset (e.g., ImageNet-1K, ImageNet-21K) and communicate a new task by transmitting only the class labels for specific images. To address the distribution mismatch between the reference and target datasets, we introduce a pruning mechanism that filters the reference dataset to retain only the labels of the most semantically relevant images for the target task. This selection process simultaneously maximizes training efficiency and minimizes transmission payload. Experiments on 10 diverse datasets demonstrate that our approach can transfer task knowledge with a payload of less than 1 MB while retaining high classification accuracy, offering a promising solution for efficient dataset serving.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23358v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23358v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23358v1"
+    },
+    {
+      "id": 6,
+      "arxiv_id": "2602.23357v1",
+      "fetched_date": "2026-03-01T17:32:43.598124",
+      "published": "2026-02-26T18:57:52+00:00",
+      "title": "Sensor Generalization for Adaptive Sensing in Event-based Object Detection via Joint Distribution Training",
+      "authors": [
+        "Aheli Saha",
+        "René Schuster",
+        "Didier Stricker"
+      ],
+      "summary": "Bio-inspired event cameras have recently attracted significant research due to their asynchronous and low-latency capabilities. These features provide a high dynamic range and significantly reduce motion blur. However, because of the novelty in the nature of their output signals, there is a gap in the variability of available data and a lack of extensive analysis of the parameters characterizing their signals. This paper addresses these issues by providing readers with an in-depth understanding of how intrinsic parameters affect the performance of a model trained on event data, specifically for object detection. We also use our findings to expand the capabilities of the downstream model towards sensor-agnostic robustness.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23357v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23357v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23357v1"
+    },
+    {
+      "id": 7,
+      "arxiv_id": "2602.23353v1",
+      "fetched_date": "2026-03-01T17:32:43.598173",
+      "published": "2026-02-26T18:55:06+00:00",
+      "title": "SOTAlign: Semi-Supervised Alignment of Unimodal Vision and Language Models via Optimal Transport",
+      "authors": [
+        "Simon Roschmann",
+        "Paul Krzakala",
+        "Sonia Mazelet",
+        "Quentin Bouniot",
+        "Zeynep Akata"
+      ],
+      "summary": "The Platonic Representation Hypothesis posits that neural networks trained on different modalities converge toward a shared statistical model of the world. Recent work exploits this convergence by aligning frozen pretrained vision and language models with lightweight alignment layers, but typically relies on contrastive losses and millions of paired samples. In this work, we ask whether meaningful alignment can be achieved with substantially less supervision. We introduce a semi-supervised setting in which pretrained unimodal encoders are aligned using a small number of image-text pairs together with large amounts of unpaired data. To address this challenge, we propose SOTAlign, a two-stage framework that first recovers a coarse shared geometry from limited paired data using a linear teacher, then refines the alignment on unpaired samples via an optimal-transport-based divergence that transfers relational structure without overconstraining the target space. Unlike existing semi-supervised methods, SOTAlign effectively leverages unpaired images and text, learning robust joint embeddings across datasets and encoder pairs, and significantly outperforming supervised and semi-supervised baselines.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23353v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23353v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23353v1"
+    },
+    {
+      "id": 8,
+      "arxiv_id": "2602.23351v1",
+      "fetched_date": "2026-03-01T17:32:43.598233",
+      "published": "2026-02-26T18:54:06+00:00",
+      "title": "Scale Can't Overcome Pragmatics: The Impact of Reporting Bias on Vision-Language Reasoning",
+      "authors": [
+        "Amita Kamath",
+        "Jack Hessel",
+        "Khyathi Chandu",
+        "Jena D. Hwang",
+        "Kai-Wei Chang",
+        "Ranjay Krishna"
+      ],
+      "summary": "The lack of reasoning capabilities in Vision-Language Models (VLMs) has remained at the forefront of research discourse. We posit that this behavior stems from a reporting bias in their training data. That is, how people communicate about visual content by default omits tacit information needed to supervise some types of reasoning; e.g., at the game today! is a more likely caption than a photo of 37 people standing behind a field. We investigate the data underlying the popular VLMs OpenCLIP, LLaVA-1.5 and Molmo through the lens of theories from pragmatics, and find that reporting bias results in insufficient representation of four reasoning skills (spatial, temporal, negation, and counting), despite the corpora being of web-scale, andor synthetically generated. With a set of curated benchmarks, we demonstrate that: (i) VLMs perform poorly on the aforementioned types of reasoning suppressed in the training data by reporting bias; (ii) contrary to popular belief, scaling data size, model size, and to multiple languages does not result in emergence of these skills by default; but, promisingly, (iii) incorporating annotations specifically collected to obtain tacit information is effective. Our findings highlight the need for more intentional training data curation methods, rather than counting on scale for emergence of reasoning capabilities.",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23351v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23351v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23351v1"
+    },
+    {
+      "id": 9,
+      "arxiv_id": "2602.23349v1",
+      "fetched_date": "2026-03-01T17:32:43.598299",
+      "published": "2026-02-26T18:52:22+00:00",
+      "title": "FlashOptim: Optimizers for Memory Efficient Training",
+      "authors": [
+        "Jose Javier Gonzalez Ortiz",
+        "Abhay Gupta",
+        "Chris Renard",
+        "Davis Blalock"
+      ],
+      "summary": "Standard mixed-precision training of neural networks requires many bytes of accelerator memory for each model parameter. These bytes reflect not just the parameter itself, but also its gradient and one or more optimizer state variables. With each of these values typically requiring 4 bytes, training even a 7 billion parameter model can be impractical for researchers with less than 100GB of accelerator memory. We introduce FlashOptim, a suite of optimizations that reduces per-parameter memory by over 50 while preserving model quality and API compatibility. Our approach introduces two key techniques. First, we improve master weight splitting by finding and exploiting a tight bound on its quantization error. Second, we design companding functions that greatly reduce the error in 8-bit optimizer state quantization. Together with 16-bit gradients, these techniques reduce AdamW memory from 16 bytes to 7 bytes per parameter, or 5 bytes with gradient release. They also cut model checkpoint sizes by more than half. Experiments with FlashOptim applied to SGD, AdamW, and Lion show no measurable quality degradation on any task from a collection of standard vision and language benchmarks, including Llama-3.1-8B finetuning.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23349v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23349v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23349v1"
+    },
+    {
+      "id": 10,
+      "arxiv_id": "2602.23339v1",
+      "fetched_date": "2026-03-01T17:32:43.598368",
+      "published": "2026-02-26T18:45:33+00:00",
+      "title": "Retrieve and Segment: Are a Few Examples Enough to Bridge the Supervision Gap in Open-Vocabulary Segmentation?",
+      "authors": [
+        "Tilemachos Aravanis",
+        "Vladan Stojnić",
+        "Bill Psomas",
+        "Nikos Komodakis",
+        "Giorgos Tolias"
+      ],
+      "summary": "Open-vocabulary segmentation (OVS) extends the zero-shot recognition capabilities of vision-language models (VLMs) to pixel-level prediction, enabling segmentation of arbitrary categories specified by text prompts. Despite recent progress, OVS lags behind fully supervised approaches due to two challenges: the coarse image-level supervision used to train VLMs and the semantic ambiguity of natural language. We address these limitations by introducing a few-shot setting that augments textual prompts with a support set of pixel-annotated images. Building on this, we propose a retrieval-augmented test-time adapter that learns a lightweight, per-image classifier by fusing textual and visual support features. Unlike prior methods relying on late, hand-crafted fusion, our approach performs learned, per-query fusion, achieving stronger synergy between modalities. The method supports continually expanding support sets, and applies to fine-grained tasks such as personalized segmentation. Experiments show that we significantly narrow the gap between zero-shot and supervised segmentation while preserving open-vocabulary ability.",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23339v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23339v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23339v1"
+    },
+    {
+      "id": 11,
+      "arxiv_id": "2602.23336v1",
+      "fetched_date": "2026-03-01T17:32:43.598424",
+      "published": "2026-02-26T18:41:31+00:00",
+      "title": "Differentiable Zero-One Loss via Hypersimplex Projections",
+      "authors": [
+        "Camilo Gomez",
+        "Pengyang Wang",
+        "Liansheng Tang"
+      ],
+      "summary": "Recent advances in machine learning have emphasized the integration of structured optimization components into end-to-end differentiable models, enabling richer inductive biases and tighter alignment with task-specific objectives. In this work, we introduce a novel differentiable approximation to the zero-one loss-long considered the gold standard for classification performance, yet incompatible with gradient-based optimization due to its non-differentiability. Our method constructs a smooth, order-preserving projection onto the n,k-dimensional hypersimplex through a constrained optimization framework, leading to a new operator we term Soft-Binary-Argmax. After deriving its mathematical properties, we show how its Jacobian can be efficiently computed and integrated into binary and multiclass learning systems. Empirically, our approach achieves significant improvements in generalization under large-batch training by imposing geometric consistency constraints on the output logits, thereby narrowing the performance gap traditionally observed in large-batch training.",
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23336v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23336v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23336v1"
+    },
+    {
+      "id": 12,
+      "arxiv_id": "2602.23335v1",
+      "fetched_date": "2026-03-01T17:32:43.598496",
+      "published": "2026-02-26T18:40:28+00:00",
+      "title": "Understanding Usage and Engagement in AI-Powered Scientific Research Tools: The Asta Interaction Dataset",
+      "authors": [
+        "Dany Haddad",
+        "Dan Bareket",
+        "Joseph Chee Chang",
+        "Jay DeYoung",
+        "Jena D. Hwang",
+        "Uri Katz",
+        "Mark Polak",
+        "Sangho Suh",
+        "Harshit Surana",
+        "Aryeh Tiktinsky",
+        "Shriya Atmakuri",
+        "Jonathan Bragg",
+        "Mike D'Arcy",
+        "Sergey Feldman",
+        "Amal Hassan-Ali",
+        "Rubén Lozano",
+        "Bodhisattwa Prasad Majumder",
+        "Charles McGrady",
+        "Amanpreet Singh",
+        "Brooke Vlahos",
+        "Yoav Goldberg",
+        "Doug Downey"
+      ],
+      "summary": "AI-powered scientific research tools are rapidly being integrated into research workflows, yet the field lacks a clear lens into how researchers use these systems in real-world settings. We present and analyze the Asta Interaction Dataset, a large-scale resource comprising over 200,000 user queries and interaction logs from two deployed tools (a literature discovery interface and a scientific question-answering interface) within an LLM-powered retrieval-augmented generation platform. Using this dataset, we characterize query patterns, engagement behaviors, and how usage evolves with experience. We find that users submit longer and more complex queries than in traditional search, and treat the system as a collaborative research partner, delegating tasks such as drafting content and identifying research gaps. Users treat generated responses as persistent artifacts, revisiting and navigating among outputs and cited evidence in non-linear ways. With experience, users issue more targeted queries and engage more deeply with supporting citations, although keyword-style queries persist even among experienced users. We release the anonymized dataset and analysis with a new query intent taxonomy to inform future designs of real-world AI research assistants and to support realistic evaluation.",
+      "primary_category": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23335v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23335v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23335v1"
+    },
+    {
+      "id": 13,
+      "arxiv_id": "2602.23334v1",
+      "fetched_date": "2026-03-01T17:32:43.598573",
+      "published": "2026-02-26T18:40:02+00:00",
+      "title": "Bitwise Systolic Array Architecture for Runtime-Reconfigurable Multi-precision Quantized Multiplication on Hardware Accelerators",
+      "authors": [
+        "Yuhao Liu",
+        "Salim Ullah",
+        "Akash Kumar"
+      ],
+      "summary": "Neural network accelerators have been widely applied to edge devices for complex tasks like object tracking, image recognition, etc. Previous works have explored the quantization technologies in related lightweight accelerator designs to reduce hardware resource consumption. However, low precision leads to high accuracy loss in inference. Therefore, mixed-precision quantization becomes an alternative solution by applying different precision in different layers to trade off resource consumption and accuracy. Because regular designs for multiplication on hardware cannot support the precision reconfiguration for a multi-precision Quantized Neural Network (QNN) model in runtime, we propose a runtime reconfigurable multi-precision multi-channel bitwise systolic array design for QNN accelerators. We have implemented and evaluated our work on the Ultra96 FPGA platform. Results show that our work can achieve 1.3185 to 3.5671 times speedup in inferring mixed-precision models and has less critical path delay, supporting a higher clock frequency (250MHz).",
+      "primary_category": "cs.AR",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23334v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23334v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23334v1"
+    },
+    {
+      "id": 14,
+      "arxiv_id": "2602.23331v1",
+      "fetched_date": "2026-03-01T17:32:43.598630",
+      "published": "2026-02-26T18:38:00+00:00",
+      "title": "Utilizing LLMs for Industrial Process Automation",
+      "authors": [
+        "Salim Fares"
+      ],
+      "summary": "A growing number of publications address the best practices to use Large Language Models (LLMs) for software engineering in recent years. However, most of this work focuses on widely-used general purpose programming languages like Python due to their widespread usage training data. The utility of LLMs for software within the industrial process automation domain, with highly-specialized languages that are typically only used in proprietary contexts, remains underexplored. This research aims to utilize and integrate LLMs in the industrial development process, solving real-life programming tasks (e.g., generating a movement routine for a robotic arm) and accelerating the development cycles of manufacturing systems.",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23331v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23331v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23331v1"
+    },
+    {
+      "id": 15,
+      "arxiv_id": "2602.23330v1",
+      "fetched_date": "2026-03-01T17:32:43.598680",
+      "published": "2026-02-26T18:37:36+00:00",
+      "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
+      "authors": [
+        "Kunihiro Miyazaki",
+        "Takanobu Kawahara",
+        "Stephen Roberts",
+        "Stefan Zohren"
+      ],
+      "summary": "The advancement of large language models (LLMs) has accelerated the development of autonomous financial trading systems. While mainstream approaches deploy multi-agent systems mimicking analyst and manager roles, they often rely on abstract instructions that overlook the intricacies of real-world workflows, which can lead to degraded inference performance and less transparent decision-making. Therefore, we propose a multi-agent LLM trading framework that explicitly decomposes investment analysis into fine-grained tasks, rather than providing coarse-grained instructions. We evaluate the proposed framework using Japanese stock data, including prices, financial statements, news, and macro information, under a leakage-controlled backtesting setting. Experimental results show that fine-grained task decomposition significantly improves risk-adjusted returns compared to conventional coarse-grained designs. Crucially, further analysis of intermediate agent outputs suggests that alignment between analytical outputs and downstream decision preferences is a critical driver of system performance. Moreover, we conduct standard portfolio optimization, exploiting low correlation with the stock index and the variance of each systems output. This approach achieves superior performance. These findings contribute to the design of agent structure and task configuration when applying LLM agents to trading systems in practical settings.",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "q-fin.TR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2602.23330v1",
+      "ar5iv_url": "https://ar5iv.labs.arxiv.org/html/2602.23330v1",
+      "arxiv_url": "https://arxiv.org/abs/2602.23330v1"
+    }
+  ],
+  "query_used": "(cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV) AND (large language models OR transformers OR attention mechanism)",
+  "categories_searched": [
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.CV"
+  ]
+}
